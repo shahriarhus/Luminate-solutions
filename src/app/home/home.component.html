@@ -1,0 +1,129 @@
+<app-navbar/>
+<div class="home-main">
+
+    <div class="home-sub-container">
+        <div class="home-sub-container-disc">
+            <h2>Elevate Experiences & Satisfaction</h2>
+            <h1>Expert Web Development Services for <br> Stunning Online Solutions |<span> Luminate Web Solutions.</span></h1>
+            <p>Welcome visitors and briefly introduce your company’s <br> mission and focus on delivering web solutions.</p>
+        </div>
+        <div class="home-sub-container-img">
+            <img src="./banner.png" alt="">
+        </div>
+
+    </div>
+</div>
+
+<div class="line"></div>
+
+<div class="transformative">
+    <h2>Inspiring and creating transformative change</h2>
+    <p>We offering our clients unlock growth by focusing on three key solution areas:</p>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container">
+    <!-- Buttons -->
+     <div class="hover-btn">
+        <button 
+            (mouseover)="showContent('digitalMarketing')" 
+            class="button">
+            Digital Marketing
+        </button>
+        <button 
+            (mouseover)="showContent('webDevelopment')" 
+            class="button">
+            Development
+        </button>
+     </div>
+    
+    <!-- Containers -->
+    <div *ngIf="currentContent === 'digitalMarketing'" class="content-box digital-marketing">
+
+        <div class="marketing-desc">
+            <p>We are offering marketing operations services with talent, domain expertise, and platform knowledge. <br>
+                We automate processes, optimize personalized campaigns, and swiftly deploy new initiatives.</p>
+        </div>
+        <div class="marketing-cards">
+            <div class="cards">
+                <div class="cards-img">
+                    <img src="./digital-market.webp" alt="">
+                </div>
+                <div class="cards-desc">
+                    <h2>Digital Marketing Solutions</h2>
+                    <p>We define success by your goals, utilizing global technical and creative expertise to achieve remarkable results together.</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="cards-img">
+                    <img src="./ads.webp" alt="">
+                </div>
+                <div class="cards-desc">
+                    <h2>Paid Ads Campaigns</h2>
+                    <p>Paid advertising is crucial for consumer connection, yet companies struggle to optimize its value effectively in spending.</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="cards-img">
+                    <img src="./social-media.webp" alt="">
+                </div>
+                <div class="cards-desc">
+                    <h2>Social Media Branding</h2>
+                    <p>We specialize in Brand Strategy & Identity, Brand Activation, and Digital Experiences. As a premier branding agency.</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="cards-img">
+                    <img src="./search-engin.jpg" alt="">
+                </div>
+                <div class="cards-desc">
+                    <h2>Search Engine Optimization</h2>
+                    <p>Allow the power of keywords, content, and link building help your website be found wherever your audience is searching.</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="cards-img">
+                    <img src="./whatsapp-marketing.jpg" alt="">
+                </div>
+                <div class="cards-desc">
+                    <h2>WhatsApp Marketing</h2>
+                    <p>Whatsapp marketing is a type of messenger marketing, which implies promoting a brand through WhatsApp.</p>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="cards-img">
+                    <img src="./branding.jpg" alt="">
+                </div>
+                <div class="cards-desc">
+                    <h2>Online Branding</h2>
+                    <p>Grow your Brand and reach out to your correct target audience to sell your products/services</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div *ngIf="currentContent === 'webDevelopment'" class="content-box web-development">
+      <h3>Web Development</h3>
+      <p>Master HTML, CSS, JavaScript, Angular, and React to build amazing websites!</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
