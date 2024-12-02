@@ -5,6 +5,7 @@
 .home-sub-container{
     height: 500px;
     display: flex;
+    justify-content: center;
     padding: 20px  0;
 }
 
@@ -23,7 +24,7 @@
 .home-sub-container-disc h2{
     color: #4682B4;
     margin-bottom: 10px;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .home-sub-container-disc span{
@@ -73,7 +74,7 @@
 
 
 
-
+/* --------Marketing Section--------------------- */
 
 .container {
     text-align: center;
@@ -127,7 +128,7 @@
     margin: auto;
     /* border: 1px solid; */
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     margin-top: 30px;
   }
 
@@ -138,7 +139,15 @@
     padding: 10px;
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
     border-radius: 50px 0;
+    transition: transform 0.7s ease, box-shadow 0.7s ease; 
+    position: relative;
+    overflow: hidden;
   }
+  .cards:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+
   .cards-img{
     height: 180px;
   }
@@ -156,6 +165,19 @@
     color: #4682B4;
     margin-bottom: 10px;
   }
+
+  .cards-btn{
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .cards-btn a{
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: #4682B4;
+    color: #fff;
+    border-radius: 20px 0;
+  }
   
   .digital-marketing {
     background-color: #f9f9f9;
@@ -163,7 +185,7 @@
   }
   
   .web-development {
-    background-color: #e8f5e9;
-    color: #2e7d32;
+    background-color: #f9f9f9;
+    color: #333;
   }
   

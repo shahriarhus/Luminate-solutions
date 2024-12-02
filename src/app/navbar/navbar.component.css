@@ -30,6 +30,7 @@
 }
 .logo img{
     height: 80px;
+    /* background-color: black; */
 }
 .nav-list{
     display: flex;
