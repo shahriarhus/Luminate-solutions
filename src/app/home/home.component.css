@@ -10,7 +10,7 @@
 }
 
 .line{
-    width: 80%;
+    width: 90%;
     border-bottom: 1px solid #4682B4;
     margin: auto;
 }
@@ -112,9 +112,8 @@
   
   .content-box {
     margin-top: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+  
   }
 
   .marketing-desc{
@@ -134,6 +133,7 @@
 
   .cards{
     /* border: 1px solid; */
+    background-color: #fff;
     width: 20%;
     height: 400px;
     padding: 10px;
@@ -180,12 +180,54 @@
   }
   
   .digital-marketing {
-    background-color: #f9f9f9;
+    background-color: #faf8f8;
     color: #333;
   }
   
   .web-development {
-    background-color: #f9f9f9;
+    background-color: #fafafa;
     color: #333;
   }
+
+
+
+
+  .business-reinvent{
+    height: fit-content;
+    margin-top: 50px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  .reinvent-img{
+    width: 50%;
+  }
+  .reinvent-img img{
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.7s ease, box-shadow 0.7s ease; 
+    position: relative;
+  }
+
+  .reinvent-img img:hover{
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  }
+.reinvent-desc{
+  width: 40%;
+  text-align: start !important;
+}
+.reinvent-desc h3{
+  font-size: 25px;
+}
+
+.reinvent-desc h1{
+  color: #4682B4;
+}
+.reinvent-desc p{
+  margin: 15px 0;
+  font-size: 17px;
+}
   
