@@ -50,35 +50,20 @@
                 We automate processes, optimize personalized campaigns, and swiftly deploy new initiatives.</p>
         </div>
         <div class="marketing-cards">
-            <div class="cards">
+            <div class="cards" *ngFor="let card of marketingCards">
                 <div class="cards-img">
-                    <img src="./digital-market.webp" alt="">
+                    <img src="./{{card.img_src}}" alt="">
                 </div>
                 <div class="cards-desc">
-                    <h2>Digital Marketing Solutions</h2>
-                    <p>We define success by your goals, utilizing global technical and creative expertise to achieve
-                        remarkable results together.</p>
+                    <h2>{{card.title}}</h2>
+                    <p>{{card.description}}</p>
                 </div>
                 <div class="cards-btn">
-                    <a href="#">Know More</a>
+                    <a href={{card.link}}>Know More</a>
                 </div>
             </div>
 
-            <div class="cards">
-                <div class="cards-img">
-                    <img src="./ads.webp" alt="">
-                </div>
-                <div class="cards-desc">
-                    <h2>Paid Ads Campaigns</h2>
-                    <p>Paid advertising is crucial for consumer connection, yet companies struggle to optimize its value
-                        effectively in spending.</p>
-                </div>
-                <div class="cards-btn">
-                    <a href="#">Know More</a>
-                </div>
-            </div>
-
-            <div class="cards">
+            <!-- <div class="cards">
                 <div class="cards-img">
                     <img src="./social-media.webp" alt="">
                 </div>
@@ -131,7 +116,7 @@
                 <div class="cards-btn">
                     <a href="#">Know More</a>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </div>
