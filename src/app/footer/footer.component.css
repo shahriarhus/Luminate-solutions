@@ -1,0 +1,10 @@
+.copyright{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:57%
+}
+
+.selfalign{
+    /* margin-left: 57%; */
+}

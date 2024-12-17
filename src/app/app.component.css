@@ -1,0 +1,10 @@
+.container1 {
+    height: 100vh; /* make the container take up the full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* add this to make the footer stick to the bottom */
+  }
+  
+  .footer {
+    margin-top: auto; /* add this to make the footer stick to the bottom */
+  }

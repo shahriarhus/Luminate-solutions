@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+/* Reset default margin, padding, and box-sizing */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-}
+    /* box-sizing: border-box; */
+  }
