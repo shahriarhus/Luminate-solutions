@@ -13,7 +13,9 @@ import { FooterComponent } from './footer/footer.component';
 import { NoopAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { trigger } from '@angular/animations';
+// import { trigger } from '@angular/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -25,11 +27,12 @@ import { trigger } from '@angular/animations';
     ContactComponent,
     FooterComponent,
     
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    BrowserAnimationsModule 
   ],
   providers: [
     provideHttpClient(),
