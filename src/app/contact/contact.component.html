@@ -1,1 +1,27 @@
-<p>contact works!</p>
+<div class="contact-us-container">
+    <h2>Contact Us</h2>
+    <form>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="contactForm.name" name="name" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" [(ngModel)]="contactForm.email" name="email" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Phone</mat-label>
+        <input matInput type="tel" [(ngModel)]="contactForm.phone" name="phone" />
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Message</mat-label>
+        <textarea matInput rows="4" [(ngModel)]="contactForm.message" name="message"></textarea>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+    </form>
+  </div>
+  
