@@ -1,19 +1,19 @@
 .copyright{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
-    justify-content: center;
-    gap:56%
+    justify-content: space-between;
+    gap:47%
 }
 
 /* .copyright p:nth-child(1){
     padding-left: 1%;
 } */
 
-.align-copyright{
+/* .align-copyright{
     padding-left: 1%;
     padding-right: 1%;
-}
+} */
 
 /* .selfalign{
     margin-left: 57%;
@@ -22,5 +22,17 @@
 p{
     margin: 0;
     padding: 0;
+    white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+    .footer {
+      gap: 20px; /* smaller gap for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      gap: 10px; /* even smaller gap for even smaller screens */
+    }
+  }
