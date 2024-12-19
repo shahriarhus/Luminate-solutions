@@ -14,11 +14,9 @@ import { NoopAnimationsModule, provideAnimations } from '@angular/platform-brows
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 // import { trigger } from '@angular/animations';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -35,13 +33,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    FormsModule
-
-
   ],
   providers: [
     provideHttpClient(),
