@@ -1,0 +1,84 @@
+/* Basic styling for the main container */
+.main {
+    width: 100%;
+    height: 350px;
+    border: 2px solid #000; /* Black border */
+    margin: auto;           /* Center the box */
+    position: relative;     /* To position child elements like img inside it */
+    background-image: url('/bg.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
+
+/* Styling for the image inside .img */
+.img {
+    position: absolute;      /* Positioning the image container */
+    top: 0;                   /* Align the container to the top */
+    left: 0;                  /* Align the container to the left */
+    width: 100%;              /* Full width of the .main container */
+    height: 100%;             /* Full height of the .main container */
+}
+
+/* Styling for the content */
+.content h1 {
+    position: absolute;
+    top: 20%; /* Center the text vertically */
+    left: 65%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjust the position to exactly center */
+    color: white; /* Change the text color if needed */
+    font-size: 3em; /* Adjust the font size */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: adds shadow for better visibility */
+}
+
+.content p {
+    position: absolute;
+    top: 50%; /* Center the text vertically */
+    left: 30%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjust the position to exactly center */
+    color: white; /* Change the text color if needed */
+    font-size: 1.5em; /* Adjust the font size */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: adds shadow for better visibility */
+}
+
+.left-box {
+    width: 430px; /* Set the width of the box */
+    background-color: rgba(233, 16, 16, 0.962); /* Optional: semi-transparent background */
+    color: rgb(252, 250, 250); /* Text color inside the box */
+    padding: 20px; /* Add some padding */
+    height: 180px;
+    margin-left: 50%;
+    margin-top: 11%;
+}
+.img1 img {
+    width: 900px;
+    height: 400px;
+   margin-left: 10%;
+    margin-top: 2px;
+   
+    
+
+}
+.img1 {
+    display: flex;
+    
+    align-items: center;
+    
+}
+.img1 span{
+
+   width: 600px;
+    height: 155px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-style: oblique;
+    background-color: rgb(208, 203, 203);
+    margin-left: 99px;
+}
+
+.boxs{
+
+    border: 2px solid black;
+    height: 300px;
+    width: 100%px;
+}
