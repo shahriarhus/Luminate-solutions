@@ -1,11 +1,10 @@
-/* Basic styling for the main container */
 .main {
     width: 100%;
     height: 350px;
     border: 2px solid #000; /* Black border */
     margin: auto;           /* Center the box */
     position: relative;     /* To position child elements like img inside it */
-    background-image: url('/bg.jpg'); /* Set the background image */
+    background-image: url('/bg.jpg'); /* Corrected path */
     background-size: cover; /* Ensure the image covers the entire container */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -78,7 +77,65 @@
 
 .boxs{
 
-    border: 2px solid black;
     height: 300px;
     width: 100%px;
+    display: flex;
+    justify-content: center;
+}
+.box1{
+    width: 27%;
+    height: 200px;
+    margin: auto;
+    background-color: azure;
+    border-radius: 10px;
+}
+.box2{
+    width: 27%;
+    height: 200px;
+    margin: auto;
+    background-color: antiquewhite;
+    border-radius: 10px;
+
+}
+.box3{
+    width: 27%;
+    height: 200px;
+    margin: auto;
+    background-color: azure;
+    border-radius: 10px;
+
+
+
+}
+.content1{
+    justify-content: center;
+    align-items: center;
+    margin-left: 27%;
+    font-style: inherit;
+    margin-top: 10px;
+    
+}
+.img2 img{
+    height: 500px;
+    border-radius: 5px;
+}
+.img2{
+    display: flex;
+}
+.img2 h1{
+     
+    justify-content: baseline;
+    align-items: center;
+    display: contents;
+
+
+}
+.img2 h3{
+
+    margin-top: 30px;
+    padding-top: 200px;
+}
+.img2 p{
+    margin-top: 0px;
+
 }
