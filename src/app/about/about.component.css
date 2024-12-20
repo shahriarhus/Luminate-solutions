@@ -221,6 +221,7 @@ p {
     max-width: 800px;
     margin-top: 20px;
 }
+
 /* Sponsors Section */
 .sponsors {
     background-color: #deedfa;
@@ -250,8 +251,8 @@ p {
 
 .slider-track {
     display: flex;
-    width: max-content; /* This ensures the track is as wide as all logos combined */
-    animation: slide 20s linear infinite; /* Adjust the timing here to control the speed */
+    animation: slide 20s infinite linear;
+    justify-content: space-evenly;
     padding: 20px 0;
 }
 
@@ -269,42 +270,18 @@ p {
     margin: 0 auto;
 }
 
-/* Animation for the cyclical sliding effect */
 @keyframes slide {
     0% {
-        transform: translateX(0); /* Start from the beginning */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); /* Move all logos off-screen to the left */
+        transform: translateX(-100%);
     }
 }
 
-/* Hover effect on sponsor logos */
 .sponsor-logo:hover {
     opacity: 1;
     transform: scale(1.1);
-}
-
-/* Adjust the space between the logos */
-.sponsor-slider .slider-track .sponsor-logo {
-    margin-right: 50px; /* Adjust space between logos */
-}
-
-/* Creating an infinite loop by repeating the logos */
-.sponsor-slider .slider-track .sponsor-logo:last-child {
-    margin-right: 0;
-}
-
-/* Prevent the slider from jumping by duplicating logos */
-.sponsor-slider .slider-track {
-    display: flex;
-    width: max-content;
-    animation: slide 20s linear infinite;
-}
-
-/* Duplicate the logos for the loop effect */
-.sponsor-slider .slider-track .sponsor-logo:nth-child(n+7) {
-    margin-right: 0;
 }
 
 /* Testimonials Section */
