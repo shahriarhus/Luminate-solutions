@@ -13,6 +13,6 @@ platformBrowserDynamic().bootstrapModule(AppModule, {
 
   bootstrapApplication(AppComponent, {
     providers: [
-      provideAnimationsAsync(),
+      provideAnimationsAsync(), provideAnimationsAsync(),
     ]
   });
