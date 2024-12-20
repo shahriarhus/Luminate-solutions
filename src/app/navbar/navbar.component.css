@@ -1,3 +1,4 @@
+/* Navbar styles */
 .sub-nav{
     background-color: #4682B4;
     height: 40px;
@@ -27,35 +28,78 @@
     margin-bottom: 1.5%;
 }
 
-.navbar{
+.navbar {
     height: 80px;
     padding: 0px 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.3);
     background-color: #DEEDFA;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.logo{
+.nav-list a.active-link {
+    color: #2c578a; /* Highlight color */
+    font-weight: bold;
+    border-bottom: 2px solid #4682B4; /* Adds a bottom border */
+    transition: all 0.3s ease-in-out;
 }
-.logo img{
+
+/* Logo styles */
+.logo img {
     height: 80px;
-    /* background-color: black; */
+    transition: all 0.3s ease-in-out;
 }
-.nav-list{
+
+.logo img:hover {
+    box-shadow: 0 0 15px 5px #4682B4;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navigation list */
+.nav-list {
     display: flex;
     align-items: center;
     margin-right: 100px;
 }
-.nav-list a{
+
+/* Navigation links */
+.nav-list a {
     text-decoration: none;
     color: #4682B4;
     margin-left: 50px;
     font-size: 17px;
-    padding: 5px 10px;
     font-weight: 510;
+    padding: 5px 10px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
 }
-.nav-list a:hover{
-    text-decoration: underline;
-    transition: 0.8s;
-    
+
+/* Hover effect for navigation links */
+.nav-list a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #4682B4;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+.nav-list a:hover {
+    color: #2c578a;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+/* Navbar sticky effect */
+.navbar.sticky {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
