@@ -143,6 +143,20 @@
     position: relative;
     overflow: hidden;
   }
+
+  /* .cards:nth-child(5)
+  {
+    height: 500px !important;
+  } */
+
+  /* div.cards:nth-child(1){
+    height: 500px !important;
+  } */
+
+  #erp_css{
+    height: 425px !important
+  }
+
   .cards:hover{
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
@@ -168,7 +182,7 @@
 
   .cards-btn{
     text-align: center;
-    margin-top: 50px;
+    margin-top: 15px;
   }
 
   .cards-btn a{
