@@ -9,3 +9,16 @@
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f7f9fc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
