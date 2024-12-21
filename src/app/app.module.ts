@@ -16,6 +16,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 // import { trigger } from '@angular/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
+
 
 
 @NgModule({
@@ -35,6 +38,8 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     MatFormFieldModule,
     MatButtonModule,
+    MatIconModule,
+    RouterModule
   ],
   providers: [
     provideHttpClient(),
