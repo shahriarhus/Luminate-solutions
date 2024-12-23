@@ -1,173 +1,134 @@
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Empower Your Brand with Digital Innovation</h1>
-            <p>We specialize in custom digital strategies and development services to drive your business forward in the digital age.</p>
-            <button class="cta-btn">Get Started</button>
-        </div>
-        <div class="hero-img">
-            <img src="hero.jpg" alt="Hero Image">
-        </div>
-    </section>
+    <div class="solutions-page">
+        <header class="page-header">
+            <h1>Our Solutions</h1>
+            <p>
+                Discover how our innovative solutions can help your business thrive in the digital age.
+                With a focus on technology development and innovation, our experienced team of specialists and strategic thinkers
+                generates and executes ideas with technical expertise and robust support worldwide.
+            </p>
+        </header>
 
-    <!-- Solutions Overview Section -->
-    <section class="solutions-overview">
-        <h2>Our Expertise</h2>
-        <p>Explore our wide range of services designed to enhance your brand and business operations in the digital space.</p>
-        <div class="solutions-images">
-            <img src="img1.jpg" alt="Solution Image 1">
-            <img src="img2.jpg" alt="Solution Image 2">
-            <img src="img3.jpg" alt="Solution Image 3">
-        </div>
-    </section>
-
-    <!-- Service Sections -->
-    <section class="service-section">
-        <div class="service">
-            <div class="service-img" id="social-media">
-                <img src="social.media.jpg" alt="Social Media Branding">
-            </div>
-            <div class="service-content">
-                <h3>Social Media Branding</h3>
-                <p>Build your brand's identity and engage your audience through creative social media strategies that drive growth.</p>
-                <ul>
-                    <li>Brand Strategy & Identity</li>
-                    <li>Brand Activation</li>
-                    <li>Digital Experiences</li>
-                </ul>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
+        <!-- Digital Marketing Section Heading -->
+        <div class="section-heading">
+            <h2>Digital Marketing</h2>
         </div>
 
-        <div class="service">
-            <div class="service-img" id="SEO">
-                <img src="seo1.jpg" alt="SEO">
+        <section class="solutions-grid">
+            <!-- Digital Marketing Solution Cards -->
+            <div class="solution-card">
+                <img src="digital-market.webp" alt="Social Media Marketing" class="solution-image" />
+                <h3 class="solution-title">Social Media Marketing</h3>
+                <p class="solution-description">
+                    Boost your brand presence and engage with your audience through social media platforms.
+                    <span>We specialize in Brand Strategy & Identity, Brand Activation, and Digital Experiences. As a premier branding agency.</span>
+                </p>
+                <button class="learn-more-btn" (click)="openPopup($event)">Learn More</button>
             </div>
-            <div class="service-content">
-                <h3>Search Engine Optimization</h3>
-                <p>Boost your visibility and drive organic traffic with SEO techniques tailored to your audience and business goals.</p>
-                <ul>
-                    <li>On-page Optimization</li>
-                    <li>Link Building</li>
-                    <li>Content Strategy</li>
-                </ul>
-                <a href="#" class="learn-more">Learn More</a>
+
+            <div class="solution-card">
+                <img src="search-engin.jpg" alt="Search Engine Optimization" class="solution-image" />
+                <h3 class="solution-title">Search Engine Optimization</h3>
+                <p class="solution-description">
+                    Improve your website ranking and drive organic traffic with advanced SEO techniques.
+                    <span>Allow the power of keywords, content, and link building help your website be found wherever your audience is searching.</span>
+                </p>
+                
+                <button class="learn-more-btn" (click)="openPopup($event)">Learn More</button>
             </div>
+
+            <div class="solution-card">
+                <img src="whatsapp-marketing.jpg" alt="WhatsApp Marketing" class="solution-image" />
+                <h3 class="solution-title">WhatsApp Marketing</h3>
+                <p class="solution-description">
+                    WhatsApp marketing is a type of messenger marketing, which implies promoting a brand through WhatsApp.
+                    <span>Whatsapp marketing is a type of messenger marketing, which implies promoting a brand through WhatsApp.</span>
+                </p>
+                <button class="learn-more-btn" (click)="openPopup($event)">Learn More</button>
+            </div>
+
+            <div class="solution-card">
+                <img src="online branding (1).png" alt="Online Branding" class="solution-image" />
+                <h3 class="solution-title">Online Branding</h3>
+                <p class="solution-description">
+                    Grow your Brand and reach out to your correct target audience to sell your products/services.
+                    <span>Grow your Brand and reach out to your correct target audience to sell your products/services</span>
+                </p>
+                <button class="learn-more-btn" (click)="openPopup($event)">Learn More</button>
+            </div>
+        </section>
+
+        <!-- Development Section Heading -->
+        <div class="section-heading">
+            <h2>Development</h2>
         </div>
 
-        <div class="service">
-            <div class="service-img" id="whatsapp">
-                <img src="whatsapp-marketing.jpg" alt="WhatsApp Marketing">
+        <section class="solutions-grid">
+            <!-- Development Solution Cards -->
+            <div class="solution-card">
+                <img src="erp.jpg" alt="ERP Software Development" class="solution-image" />
+                <h3 class="solution-title">ERP Software Development</h3>
+                <p class="solution-description">
+                    Seeking a software development partner for scalable operations and efficient processes. Robust architecture to boost efficiency.
+                    <span>Seeking a Software development partner for scalable operations and efficient processes. Robust architecture to boost efficiency…</span>
+                </p>
+                <button class="learn-more-btn" (click)="openPopup($event)">Know More</button>
             </div>
-            <div class="service-content">
-                <h3>WhatsApp Marketing</h3>
-                <p>Utilize the power of WhatsApp to engage your customers directly with personalized and instant messaging strategies.</p>
-                <ul>
-                    <li>Instant Messaging</li>
-                    <li>Customer Engagement</li>
-                    <li>WhatsApp Automation</li>
-                </ul>
-                <a href="#" class="learn-more">Learn More</a>
+
+            <div class="solution-card">
+                <img src="CRM.jpeg" alt="Customer Relationship Management" class="solution-image" />
+                <h3 class="solution-title">Customer Relationship Management</h3>
+                <p class="solution-description">
+                    Managing interactions with existing and prospective customers during the sales process.
+                </p>
+                <button class="learn-more-btn" (click)="openPopup($event)">Know More</button>
+            </div>
+
+            <div class="solution-card">
+                <img src="custom-app.webp" alt="Custom App Development" class="solution-image" />
+                <h3 class="solution-title">Custom App Development</h3>
+                <p class="solution-description">
+                    Creating software applications specifically tailored to meet the unique needs and requirements of a particular organization.
+                </p>
+                <button class="learn-more-btn" (click)="openPopup($event)">Know More</button>
+            </div>
+
+            <div class="solution-card">
+                <img src="web.jpg" alt="Website Development" class="solution-image" />
+                <h3 class="solution-title">Website Development</h3>
+                <p class="solution-description">
+                    Create an eye-catching website that stands out from the competition. Boost your brand online with custom design services.
+                </p>
+                <button class="learn-more-btn" (click)="openPopup($event)">Know More</button>
+            </div>
+
+            <div class="solution-card">
+                <img src="website-deve.jpg" alt="Website / App Maintenance" class="solution-image" />
+                <h3 class="solution-title">Website / App Maintenance</h3>
+                <p class="solution-description">
+                    Your online assets are in safe hands, freeing you from the stress and frustration of self-management. Let’s start now.
+                </p>
+                <button class="learn-more-btn" (click)="openPopup($event)">Learn More</button>
+            </div>
+
+            <div class="solution-card">
+                <img src="cloud.webp" alt="Cloud Solutions" class="solution-image" />
+                <h3 class="solution-title">Cloud Solutions</h3>
+                <p class="solution-description">
+                    Cloud solutions refer to a variety of services, including storage, computing power, and applications, delivered over the internet from remote servers.
+                </p>
+                <button class="learn-more-btn" (click)="openPopup($event)">Learn More</button>
+            </div>
+        </section>
+
+        <!-- Popup Overlay -->
+        <div id="popup-overlay" class="popup-overlay hidden" (click)="closePopupOnOverlay($event)">
+            <div class="popup-content" (click)="$event.stopPropagation()">
+                <button class="close-popup-btn" (click)="closePopup()">✖</button>
+                <img id="popup-image" class="popup-image" alt="Popup Image" />
+                <h3 id="popup-title" class="popup-title"></h3>
+                <p id="popup-description" class="popup-description"></p>
             </div>
         </div>
+    </div>
 
-        <div class="service">
-            <div class="service-img" id="online-branding">
-                <img src="online1.jpg" alt="Online Branding">
-            </div>
-            <div class="service-content">
-                <h3>Online Branding</h3>
-                <p>Expand your brand’s reach through targeted online campaigns and establish a strong digital presence across platforms.</p>
-                <ul>
-                    <li>Brand Visibility</li>
-                    <li>Target Audience Identification</li>
-                    <li>Social Media Strategies</li>
-                </ul>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Development Services Section -->
-    <section class="development-services">
-        <h2>Our Development Expertise</h2>
-        <p>Unlock your business potential with innovative, custom software and app development solutions.</p>
-        <div class="development-images">
-            <img src="developement1.jpg" alt="Development Image 1">
-            <img src="development2.jpg" alt="Development Image 2">
-        </div>
-    </section>
-
-    <section class="service-section">
-        <div class="service">
-            <div class="service-img" id="erp">
-                <img src="erp1.jpg" alt="ERP Software Development">
-            </div>
-            <div class="service-content">
-                <h3>ERP Software Development</h3>
-                <p>Streamline your operations and enhance business efficiency with a robust ERP system designed for your specific needs.</p>
-                <ul>
-                    <li>Custom ERP Development</li>
-                    <li>Process Automation</li>
-                    <li>Integration Across Platforms</li>
-                </ul>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <!-- <div class="service">
-            <div class="service-img" id="mobile-app">
-                <img src="mobile-app.jpg" alt="Mobile App Development">
-            </div>
-            <div class="service-content">
-                <h3>Mobile App Development</h3>
-                <p>Affordable Android/iOS development to improve engagement, increase retention, and expand your customer base.</p>
-                <ul>
-                    <li>Native & Hybrid Apps</li>
-                    <li>User-Focused Design</li>
-                    <li>Performance Optimization</li>
-                </ul>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
-        </div> -->
-
-        <div class="service">
-            <div class="service-img" id="custom-app">
-                <img src="custom-app.jpg" alt="Custom App Development">
-            </div>
-            <div class="service-content">
-                <h3>Custom App Development</h3>
-                <p>We provide tailor-made app solutions to solve unique business challenges and help you achieve your goals effectively.</p>
-                <ul>
-                    <li>Tailored Solutions</li>
-                    <li>End-to-End Development</li>
-                    <li>Scalable Architecture</li>
-                </ul>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <div class="service">
-            <div class="service-img" id="website">
-                <img src="website-development.jpg" alt="Website Development">
-            </div>
-            <div class="service-content">
-                <h3>Website Development</h3>
-                <p>Design an eye-catching website with modern features to increase your brand’s presence and performance online.</p>
-                <ul>
-                    <li>Responsive Design</li>
-                    <li>SEO Optimization</li>
-                    <li>Fast Loading Times</li>
-                </ul>
-                <a href="#" class="learn-more">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <h3>Reinvent Your Business Today</h3>
-        <p>Let us help you take your business to the next level. Contact us for innovative solutions that drive results.</p>
-        <button class="cta-btn">Contact Us</button>
-    </section>
