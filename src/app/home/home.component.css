@@ -144,6 +144,11 @@
     overflow: hidden;
   }
 
+  #cloud_css{
+    height: 425px !important;
+
+  }
+
   /* .cards:nth-child(5)
   {
     height: 500px !important;
