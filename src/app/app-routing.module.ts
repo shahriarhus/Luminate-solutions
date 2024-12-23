@@ -6,15 +6,26 @@ import { AboutComponent } from './about/about.component';
 import { SolutionsComponent } from './solutions/solutions.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { PrivacyPolicyComponent } from './footer/privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './footer/terms-conditions/terms-conditions.component';
+import { CancellationPolicyComponent } from './footer/cancellation-policy/cancellation-policy.component';
+import { RefundPolicyComponent } from './footer/refund-policy/refund-policy.component';
+import { DisclaimerComponent } from './footer/disclaimer/disclaimer.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: '', component: HomeComponent },
   {path:'navbar', component: NavbarComponent},
-  {path: 'home', component: HomeComponent },
   {path: 'about', component: AboutComponent},
   {path: 'solutions', component: SolutionsComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'footer', component: FooterComponent},
+  {path: 'privacy', component: PrivacyPolicyComponent},
+  {path: 'terms&conditions', component: TermsConditionsComponent},
+  {path: 'Disclaimer', component: DisclaimerComponent},
+  {path: 'Refund Policy', component: RefundPolicyComponent},
+  {path: 'Cancellation Policy', component: CancellationPolicyComponent},
+  { path: '**', redirectTo: '', pathMatch: 'full' },
+
 
 ];
 

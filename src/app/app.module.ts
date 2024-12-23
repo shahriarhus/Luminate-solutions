@@ -18,6 +18,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { PrivacyPolicyComponent } from './footer/privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './footer/terms-conditions/terms-conditions.component';
+import { DisclaimerComponent } from './footer/disclaimer/disclaimer.component';
+import { RefundPolicyComponent } from './footer/refund-policy/refund-policy.component';
+import { CancellationPolicyComponent } from './footer/cancellation-policy/cancellation-policy.component';
 
 
 
@@ -30,6 +35,11 @@ import { RouterModule } from '@angular/router';
     SolutionsComponent,
     ContactComponent,
     FooterComponent,
+    PrivacyPolicyComponent,
+    TermsConditionsComponent,
+    DisclaimerComponent,
+    RefundPolicyComponent,
+    CancellationPolicyComponent,
     
     
   ],
