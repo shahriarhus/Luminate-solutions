@@ -94,6 +94,18 @@ a:hover{
     display: inline-block;
 }
 
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .dropdown-menu.open {
+    display: block;
+  }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -106,11 +118,19 @@ a:hover{
     border-radius: 8px;
     padding: 20px;
     margin-top: 10px;
+    transition: opacity 0.3s, visibility 0.3s;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+    opacity: 1;
+  visibility: visible;
 }
+
+.dropdown-content:hover {
+    opacity: 1;
+    visibility: visible;
+  }
 
 .dropdown-columns {
     display: flex;
