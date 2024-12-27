@@ -1,6 +1,12 @@
 import { importProvidersFrom, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +29,8 @@ import { TermsConditionsComponent } from './footer/terms-conditions/terms-condit
 import { DisclaimerComponent } from './footer/disclaimer/disclaimer.component';
 import { RefundPolicyComponent } from './footer/refund-policy/refund-policy.component';
 import { CancellationPolicyComponent } from './footer/cancellation-policy/cancellation-policy.component';
+import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 
 
@@ -40,6 +48,8 @@ import { CancellationPolicyComponent } from './footer/cancellation-policy/cancel
     DisclaimerComponent,
     RefundPolicyComponent,
     CancellationPolicyComponent,
+    ChatWidgetComponent,
+    QuoteFormComponent,
     
     
   ],
@@ -49,7 +59,12 @@ import { CancellationPolicyComponent } from './footer/cancellation-policy/cancel
     MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    MatInputModule,
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    MatRadioModule
   ],
   providers: [
     provideHttpClient(),

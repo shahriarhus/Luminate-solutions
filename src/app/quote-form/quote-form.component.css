@@ -1,0 +1,134 @@
+.quote-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.quote-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/quotebg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  margin: -20px -20px 30px -20px;
+  border-radius: 8px 8px 0 0;
+}
+
+.quote-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.quote-header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+.quote-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-section h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.budget-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.file-upload {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.file-upload input[type="file"] {
+  width: 100%;
+}
+
+.file-hint {
+  margin-top: 10px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.form-actions {
+  margin-top: 30px;
+  text-align: right;
+}
+
+button[type="submit"] {
+  padding: 10px 30px;
+  font-size: 1.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quote-container {
+    padding: 10px;
+  }
+  
+  .quote-form {
+    padding: 20px;
+  }
+
+  .contact-grid,
+  .budget-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Material Design Overrides */
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: white;
+}
+
+::ng-deep .mat-checkbox-label {
+  white-space: normal !important;
+}
+

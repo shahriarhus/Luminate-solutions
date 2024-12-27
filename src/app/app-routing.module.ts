@@ -11,6 +11,7 @@ import { TermsConditionsComponent } from './footer/terms-conditions/terms-condit
 import { CancellationPolicyComponent } from './footer/cancellation-policy/cancellation-policy.component';
 import { RefundPolicyComponent } from './footer/refund-policy/refund-policy.component';
 import { DisclaimerComponent } from './footer/disclaimer/disclaimer.component';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'Disclaimer', component: DisclaimerComponent},
   {path: 'Refund Policy', component: RefundPolicyComponent},
   {path: 'Cancellation Policy', component: CancellationPolicyComponent},
+  {path: 'quote', component: QuoteFormComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' },
 
 

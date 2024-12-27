@@ -1,0 +1,182 @@
+[
+    {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening", "Greetings", "How are you?"],
+        "responses": ["Hello! Welcome to Luminate Solutions. How can I assist you today?", "Hi there! Feel free to ask about our services.", "Welcome to Luminate Solutions! How can we help?"]
+    },
+    {
+        "tag": "about_us",
+        "patterns": ["What is Luminate Solutions?", "Tell me about your company", "What do you do?", "About Luminate Solutions"],
+        "responses": ["Luminate Solutions specializes in web development and digital marketing services, delivering customized solutions to our clients worldwide."]
+    },
+    {
+        "tag": "services",
+        "patterns": ["What services do you provide?", "Tell me about your services", "What can you do for me?", "Available services"],
+        "responses": ["We offer a wide range of services including web development, digital marketing, SEO optimization, content creation, and branding solutions."]
+    },
+    {
+        "tag": "web_development",
+        "patterns": ["Do you offer web development?", "Tell me about your web development services", "Website creation"],
+        "responses": ["Yes, we provide professional web development services, including custom websites, e-commerce platforms, and responsive designs."]
+    },
+    {
+        "tag": "digital_marketing",
+        "patterns": ["Do you handle digital marketing?", "Tell me about digital marketing", "Marketing services"],
+        "responses": ["We offer comprehensive digital marketing services including social media management, SEO, and targeted advertising campaigns."]
+    },
+    {
+        "tag": "contact",
+        "patterns": ["How can I contact you?", "What is your contact info?", "Phone number", "Email address", "Office location"],
+        "responses": ["You can contact us at +1-720-736-7455 or email us at support@luminatewebsol.com. We are located in Hyderabad, Telangana, India."]
+    },
+    {
+        "tag": "portfolio",
+        "patterns": ["Can I see your work?", "Show me your portfolio", "Examples of your work"],
+        "responses": ["Our portfolio showcases various projects we've completed in web development and digital marketing. Visit our website to explore more."]
+    },
+    {
+        "tag": "pricing",
+        "patterns": ["How much do your services cost?", "Pricing details", "Service charges"],
+        "responses": ["Our pricing depends on the scope and complexity of the project. Contact us for a free consultation and detailed quote."]
+    },
+    {
+        "tag": "customer_support",
+        "patterns": ["Do you offer customer support?", "Support services", "Help desk"],
+        "responses": ["Yes, our dedicated support team is here to assist you. Reach out to us via phone or email for any queries."]
+    },
+    {
+        "tag": "projects",
+        "patterns": ["Do you handle projects?", "Can you manage a project?", "Project management services"],
+        "responses": ["Yes, we handle projects end-to-end, ensuring quality and timely delivery. Let us know your requirements."]
+    },
+    {
+        "tag": "team",
+        "patterns": ["Tell me about your team", "Who are the team members?", "About your staff", "Who works at Luminate Solutions?"],
+        "responses": ["Our team consists of experienced web developers, digital marketers, and creative strategists dedicated to delivering the best solutions."]
+    },
+    {
+        "tag": "seo_services",
+        "patterns": ["Do you offer SEO services?", "Tell me about SEO", "Search engine optimization", "SEO optimization"],
+        "responses": ["Yes, we offer expert SEO services to improve your website's visibility and ranking on search engines."]
+    },
+    {
+        "tag": "branding",
+        "patterns": ["Do you provide branding services?", "Tell me about branding", "Can you create a brand strategy?", "Branding solutions"],
+        "responses": ["We offer branding solutions that include logo design, brand strategy, and creating a unique identity for your business."]
+    },
+    {
+        "tag": "blog",
+        "patterns": ["Do you have a blog?", "Where can I read your blog?", "Content about your services", "Luminate blog"],
+        "responses": ["Yes, we have a blog that provides insights into web development, digital marketing, and industry trends. Check it out on our website!"]
+    },
+    {
+        "tag": "testimonials",
+        "patterns": ["Do you have customer testimonials?", "What do your clients say?", "Show me your testimonials", "Feedback from clients"],
+        "responses": ["Our clients love working with us! Visit our testimonials page to see what they have to say about Luminate Solutions."]
+    },
+    {
+        "tag": "custom_web_design",
+        "patterns": ["Do you create custom websites?", "Tell me about custom web design", "Bespoke websites", "Unique web design"],
+        "responses": ["We specialize in creating custom web designs tailored to your business needs. Let us help bring your vision to life."]
+    },
+    {
+        "tag": "careers",
+        "patterns": ["Are there any job openings?", "Do you have career opportunities?", "How can I join your team?", "Job vacancies"],
+        "responses": ["We’re always looking for talented individuals to join our team. Visit our careers page to see current openings."]
+    },
+    {
+        "tag": "frequently_asked_questions",
+        "patterns": ["Where can I find FAQs?", "Common questions", "Do you have a FAQ page?", "Frequently asked questions"],
+        "responses": ["Visit our FAQ section on the website to find answers to common queries about our services and processes."]
+    },
+    {
+        "tag": "partnerships",
+        "patterns": ["Do you partner with other companies?", "Tell me about partnerships", "Collaborations", "Business partners"],
+        "responses": ["Yes, we collaborate with various businesses and agencies to deliver innovative solutions. Reach out to us for partnership opportunities."]
+    },
+    {
+        "tag": "social_media",
+        "patterns": ["Where can I follow you on social media?", "Social media links", "Your social media accounts", "Follow Luminate Solutions"],
+        "responses": ["Follow us on Facebook, Instagram, LinkedIn, and Twitter to stay updated on our latest news and projects."]
+    },
+    {
+        "tag": "support_timing",
+        "patterns": ["What are your support hours?", "When can I contact support?", "Support timing", "Working hours"],
+        "responses": ["Our support team is available from 9 AM to 6 PM IST, Monday to Saturday. Feel free to reach out during these hours."]
+    },
+    {
+        "tag": "project_timeline",
+        "patterns": ["How long does it take to complete a project?", "Project timeline", "Time for project completion"],
+        "responses": ["The timeline depends on the project's scope and complexity. We ensure timely delivery while maintaining quality. Contact us for a detailed estimate."]
+    },
+    {
+        "tag": "content_creation",
+        "patterns": ["Do you offer content creation?", "Tell me about content writing", "Content writing services"],
+        "responses": ["Yes, we provide content creation services, including blog writing, social media posts, and website content tailored to your brand."]
+    },
+    {
+        "tag": "industries",
+        "patterns": ["Which industries do you serve?", "Who are your clients?", "Industries you work with"],
+        "responses": ["We serve clients from various industries, including healthcare, technology, retail, education, and real estate."]
+    },
+    {
+        "tag": "free_consultation",
+        "patterns": ["Do you offer free consultations?", "How can I get a consultation?", "Consultation services"],
+        "responses": ["Yes, we offer free consultations to understand your requirements and provide tailored solutions. Contact us to schedule a session."]
+    },
+    {
+        "tag": "mobile_app_development",
+        "patterns": ["Do you develop mobile apps?", "Tell me about mobile app development", "Can you create an app?"],
+        "responses": ["Yes, we provide mobile app development services for iOS and Android, focusing on user-friendly designs and seamless functionality."]
+    },
+    {
+        "tag": "maintenance",
+        "patterns": ["Do you offer website maintenance?", "Tell me about your maintenance services", "Can you manage my website?"],
+        "responses": ["We provide ongoing website maintenance to ensure optimal performance, security updates, and content management."]
+    },
+    {
+        "tag": "team_expertise",
+        "patterns": ["What expertise does your team have?", "Tell me about your team's skills", "Who works at Luminate Solutions?"],
+        "responses": ["Our team combines creativity, technical skills, and strategic thinking to deliver top-notch web development and digital marketing solutions tailored to your business needs."]
+    },
+    {
+        "tag": "data_science",
+        "patterns": ["Do you provide data science services?", "Tell me about data analytics", "Big data solutions"],
+        "responses": ["Yes, we offer data science and analytics services to help businesses extract valuable insights and make data-driven decisions."]
+    },
+    {
+        "tag": "support_services",
+        "patterns": ["What kind of support services do you offer?", "Do you provide IT support?", "Tell me about your support solutions"],
+        "responses": ["We provide ongoing IT and web support services to ensure the smooth operation of your digital presence. Contact us for customized solutions."]
+    },
+    {
+        "tag": "working_hours",
+        "patterns": ["What are your working hours?", "When are you available?", "Support availability"],
+        "responses": ["We are available Monday to Saturday, 9:00 AM to 6:00 PM IST. Feel free to reach out during these hours."]
+    },
+    {
+        "tag": "testimonials",
+        "patterns": ["Do you have client reviews?", "Show me customer testimonials", "Feedback from your clients"],
+        "responses": ["Yes, check out our testimonials section to see what our clients say about working with Luminate Solutions."]
+    },
+    {
+        "tag": "portfolio_projects",
+        "patterns": ["Show me your portfolio", "What projects have you completed?", "Tell me about your past work"],
+        "responses": ["Our portfolio showcases innovative projects we've delivered in web development and marketing. Visit our website to explore."]
+    },
+    {
+        "tag": "terms_conditions",
+        "patterns": ["Where can I find your terms and conditions?", "Terms of service", "Legal policies"],
+        "responses": ["Our terms and conditions are available on our website under the 'Terms' section. Contact us if you have any questions."]
+    },
+    {
+        "tag": "careers_opportunities",
+        "patterns": ["Are there job opportunities?", "Can I join your team?", "Do you have open positions?"],
+        "responses": ["We’re always looking for passionate individuals. Visit our Careers page to see current job openings."]
+    },
+    {
+        "tag": "blog_updates",
+        "patterns": ["Do you have a blog?", "Where can I read your articles?", "Tell me about your blog"],
+        "responses": ["Our blog provides insights on web development, marketing trends, and industry news. Check it out on our website."]
+    }
+]

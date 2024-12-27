@@ -249,4 +249,64 @@
   margin: 15px 0;
   font-size: 17px;
 }
-  
+
+@media (max-width: 768px) {
+  .home-sub-container {
+      flex-direction: column;
+      height: auto;
+  }
+
+  .home-sub-container-disc,
+  .home-sub-container-img {
+      width: 100%;
+      padding: 20px;
+  }
+
+  .marketing-cards {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .cards {
+      width: 90%;
+      height: auto;
+  }
+
+  .business-reinvent {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .reinvent-img,
+  .reinvent-desc {
+      width: 100%;
+  }
+
+  .hover-btn {
+      flex-wrap: wrap;
+      text-align: center;
+  }
+
+  .button {
+      margin: 5px;
+      width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-sub-container-disc h1 {
+      font-size: 20px;
+  }
+
+  .cards-desc {
+      text-align: center;
+  }
+
+  .cards-img img {
+      border-radius: 10px;
+  }
+
+  .reinvent-desc {
+      text-align: justify;
+}
+}
