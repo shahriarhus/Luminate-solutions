@@ -503,4 +503,57 @@ p {
     .testimonial-box {
         width: 90%;
     }
+
+    .image-right img {
+        display: none;
+    }
+
+    .about-us {
+        margin-top: 0px;
+        /* padding: 0px 176px; */
+        background-color: #fff;
+        text-align: center;
+        /* padding-right: 0px; */
+        /* padding-left: 100px; */
+        width: 100%;
+        gap: 0px;
+    }
+
+    .about-content{
+        gap:0px;
+    }
+
+    .image-right{
+        flex: 0;
+        /* flex-shrink: 1; */
+    }
+
+    .text-left h2{
+        font-size: 2em;
+    }
+
+    .relationships{
+        padding: 0px;
+    }
+
+    .our-culture{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+        padding-bottom: 5%;
+        margin: 0px;
+    }
+
+    .our-culture h1{
+        padding-top: 5%;
+        
+    }
+
+    .img2{
+        padding: 5%;
+    }
+
+    .img2 h3{
+        text-align: center;
+    }
 }
