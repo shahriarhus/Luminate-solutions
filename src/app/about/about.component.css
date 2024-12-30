@@ -31,31 +31,23 @@ body {
     color: white;
     padding: 0 20px;
     box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
 }
 
 .content h1 {
     font-size: 4em;
     font-weight: bold;
-    text-shadow: 10px 10px 25px rgba(0, 0, 0, 0.6);
+    text-shadow: 10px 10px 25px  rgba(0, 0, 0, 0.6);
     margin-bottom: 20px;
-
+    
 }
-
 .content p {
-    font-size: 2em;
-    /* Slightly larger for better visibility */
-    margin-bottom: 20px;
-    /* Adjusted spacing for balance */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    /* Softer shadow for better readability */
-    color: white;
-    /* High contrast for visibility */
+    font-size: 2em; /* Slightly larger for better visibility */
+    margin-bottom: 20px; /* Adjusted spacing for balance */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Softer shadow for better readability */
+    color: white; /* High contrast for visibility */
     font-weight: bold;
-    text-align: center;
-    /* Centered text for better focus */
-    line-height: 1.5;
-    /* Improves readability */
+    text-align: center; /* Centered text for better focus */
+    line-height: 1.5; /* Improves readability */
 }
 
 
@@ -94,50 +86,32 @@ body {
 /* New Relationships Section */
 .relationships {
     text-align: center;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /* Clean, modern sans-serif font */
-    padding: 70px 0;
-    /* Balanced space around the text */
-    background-color: #f7f7f7;
-    /* Light background for a clean look */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Clean, modern sans-serif font */
+    padding: 70px 0; /* Balanced space around the text */
+    background-color: #f7f7f7; /* Light background for a clean look */
 }
 
 .relationships .content p {
-    font-size: 2.5rem;
-    /* Slightly larger for emphasis */
-    color: #333;
-    /* Dark grey color for readability and professionalism */
+    font-size: 2.5rem; /* Slightly larger for emphasis */
+    color: #333; /* Dark grey color for readability and professionalism */
     margin-top: 30px;
-    font-weight: 400;
-    /* Normal weight for clarity */
-    letter-spacing: 1.2px;
-    /* Slight increase in letter spacing for sophistication */
-    line-height: 1.6;
-    /* Optimized line height for better readability */
-    text-transform: none;
-    /* Standard text styling for a clean and professional appearance */
-    text-shadow: none;
-    /* No shadow for a more polished finish */
-    border-bottom: 2px solid #ccc;
-    /* Thin border for emphasis */
-    display: inline-block;
-    /* Make the paragraph behave like an inline element for the border */
-    padding-bottom: 10px;
-    /* Padding below the text to create space between text and border */
-    transition: color 0.3s ease, transform 0.3s ease;
-    /* Smooth hover transition */
-    opacity: 0;
-    /* Start with hidden text for fade-in effect */
-    animation: fadeIn 1s forwards;
-    /* Fade-in animation */
+    font-weight: 400; /* Normal weight for clarity */
+    letter-spacing: 1.2px; /* Slight increase in letter spacing for sophistication */
+    line-height: 1.6; /* Optimized line height for better readability */
+    text-transform: none; /* Standard text styling for a clean and professional appearance */
+    text-shadow: none; /* No shadow for a more polished finish */
+    border-bottom: 2px solid #ccc; /* Thin border for emphasis */
+    display: inline-block; /* Make the paragraph behave like an inline element for the border */
+    padding-bottom: 10px; /* Padding below the text to create space between text and border */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+    opacity: 0; /* Start with hidden text for fade-in effect */
+    animation: fadeIn 1s forwards; /* Fade-in animation */
 }
 
 /* Hover effect to add subtle interactivity */
 .relationships .content p:hover {
-    color: #3498db;
-    /* Professional blue color on hover */
-    transform: translateY(-3px);
-    /* Slight upward movement for a refined interaction */
+    color: #3498db; /* Professional blue color on hover */
+    transform: translateY(-3px); /* Slight upward movement for a refined interaction */
 }
 
 /* Fade-in animation */
@@ -145,7 +119,6 @@ body {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -174,21 +147,18 @@ body {
 
 .text-left h2 {
     font-size: 3em;
-    color: #1e293b;
-    /* Deep modern gray */
+    color: #1e293b; /* Deep modern gray */
     margin-bottom: 20px;
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: capitalize;
-    border-left: 4px solid #6366f1;
-    /* Accent color */
+    border-left: 4px solid #6366f1; /* Accent color */
     padding-left: 15px;
 }
 
 .text-left p {
     font-size: 1.2em;
-    color: #4b5563;
-    /* Muted gray */
+    color: #4b5563; /* Muted gray */
     line-height: 1.8;
     max-width: 900px;
     margin: 20px 0;
@@ -233,7 +203,6 @@ body {
         opacity: 0;
         transform: translateX(-50px);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -245,7 +214,6 @@ body {
         opacity: 0;
         transform: translateX(50px);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -269,8 +237,7 @@ body {
 }
 
 .image-right img:hover {
-    transform: scale(1.05);
-    /* Slight zoom effect */
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
 /* Animations */
@@ -279,7 +246,6 @@ body {
         opacity: 0;
         transform: translateX(-30px);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -291,7 +257,6 @@ body {
         opacity: 0;
         transform: translateX(30px);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -328,9 +293,7 @@ body {
     gap: 20px;
 }
 
-.box1,
-.box2,
-.box3 {
+.box1, .box2, .box3 {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
@@ -340,9 +303,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.box1:hover,
-.box2:hover,
-.box3:hover {
+.box1:hover, .box2:hover, .box3:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -444,7 +405,6 @@ p {
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translateX(-100%);
     }
@@ -511,9 +471,7 @@ p {
         align-items: center;
     }
 
-    .box1,
-    .box2,
-    .box3 {
+    .box1, .box2, .box3 {
         width: 80%;
     }
 
@@ -530,7 +488,7 @@ p {
     }
 
     .slider-track {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
     }
 
@@ -544,58 +502,5 @@ p {
 
     .testimonial-box {
         width: 90%;
-    }
-
-    .image-right img {
-        display: none;
-    }
-
-    .about-us {
-        margin-top: 0px;
-        /* padding: 0px 176px; */
-        background-color: #fff;
-        text-align: center;
-        /* padding-right: 0px; */
-        /* padding-left: 100px; */
-        width: 100%;
-        gap: 0px;
-    }
-
-    .about-content{
-        gap:0px;
-    }
-
-    .image-right{
-        flex: 0;
-        /* flex-shrink: 1; */
-    }
-
-    .text-left h2{
-        font-size: 2em;
-    }
-
-    .relationships{
-        padding: 0px;
-    }
-
-    .our-culture{
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 0px;
-        padding-bottom: 5%;
-        margin: 0px;
-    }
-
-    .our-culture h1{
-        padding-top: 5%;
-        
-    }
-
-    .img2{
-        padding: 5%;
-    }
-
-    .img2 h3{
-        text-align: center;
     }
 }

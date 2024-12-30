@@ -1,67 +1,132 @@
 /* --------Sub-Nav Styles (updated for responsiveness)--------------------- */
-
+/* General Sub-nav Styles */
 .sub-nav {
     background-color: #4682B4;
-    height: 40px;
+    height: 60px;
     display: flex;
     align-items: center;
-    padding: 0 200px 0 50px;
-    justify-content: space-between; /* Ensures even spacing */
+    padding: 0 30px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
 }
 
+/* Mail and Phone Section Styling */
 .mail-phone {
     color: #fff;
     display: flex;
     align-items: center;
-    gap: 50px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 30px;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-out;
 }
 
 a {
     color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: black;
+    color: #154d7a;
+    text-decoration: underline;
 }
 
+/* Individual mail and phone icon styles */
 .mail, .phone {
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
+.mail mat-icon, .phone mat-icon {
+    color: #fff;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Add a hover effect on icons */
+.mail:hover mat-icon, .phone:hover mat-icon {
+    transform: scale(1.1);
+}
+
+/* Styling for phone and mail texts */
 .mail p, .phone p {
-    margin-bottom: 1.5%;
+    margin-bottom: 0;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
 }
 
-/* Responsive Sub-nav for Mobile Devices */
+/* Add hover effect for text */
+.mail:hover p, .phone:hover p {
+    opacity: 0.8;
+}
+
+/* Quote button styling */
+.quote-button {
+    background-color: #fff;
+    color: #4682B4;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.quote-button:hover {
+    background-color: #4682B4;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Sub-nav for Tablets and Smaller Screens */
 @media (max-width: 1024px) {
     .sub-nav {
-        padding: 0 20px; /* Reduced padding for smaller screens */
-        flex-direction: row; /* Stack elements vertically */
-        height: auto; /* Adjust height for smaller devices */
-        align-items: flex-start; /* Align items to the start */
+        padding: 0 20px;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .mail-phone {
         flex-direction: column;
         gap: 20px;
-        align-items: flex-start; /* Align left */
+        align-items: flex-start;
     }
 }
 
-/* Mobile view adjustments */
+/* Mobile View Adjustments */
 @media (max-width: 768px) {
     .sub-nav {
-        padding: 0 15px; /* Further reduce padding */
+        padding: 0 15px; /* Reduced padding */
     }
 
     .mail-phone {
-        gap: 15px; /* Reduced gap between items */
+        gap: 15px; /* Reduced gap */
     }
 
     .mail, .phone {
         font-size: 14px; /* Smaller font size for better fit */
+    }
+
+    .quote-button {
+        margin-top: 10px;
+        width: 50%;
+        text-align: center;
+        font-size: 14px;
     }
 }
 

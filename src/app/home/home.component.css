@@ -1,4 +1,4 @@
-/* --------General Home Section Styles--------------------- */
+
 
 .home-main {
   /* Add any general styles if needed */
@@ -23,12 +23,15 @@
   width: 50%;
   padding-left: 50px;
   box-sizing: border-box;
+  animation: fadeInLeft 1s ease-out; /* Animation added */
 }
 
 .home-sub-container-disc h2 {
   color: #4682B4;
   margin-bottom: 10px;
   margin-top: 150px;
+  opacity: 0;
+  animation: fadeInUp 1s forwards; /* Animation added */
 }
 
 .home-sub-container-disc span {
@@ -43,30 +46,37 @@
 .home-sub-container-disc p {
   margin-top: 10px;
   font-size: 20px;
+  animation: fadeInUp 1.5s forwards; /* Animation added */
 }
 
 .home-sub-container-img {
   height: 100%;
   width: 50%;
+  position: relative;
+  animation: fadeInRight 1s ease-out; /* Animation added */
 }
 
-.home-sub-container-img img {
-  height: 90%;
-  display: flex;
-  align-self: center;
-  justify-content: center;
+.home-sub-container-img iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover; /* Ensures the content fills the iframe container */
+  animation: slideIn 1s ease-out;
   max-width: 100%;
+  margin-top: 60px;
 }
 
 .transformative {
   text-align: center;
   margin-top: 30px;
+  animation: fadeInUp 1.2s forwards; /* Animation added */
 }
 
 .transformative h2 {
   color: #4682B4;
   font-size: 25px;
   margin-bottom: 5px;
+  animation: fadeInUp 1.5s forwards; /* Animation added */
 }
 
 /* --------Marketing Section--------------------- */
@@ -74,6 +84,7 @@
 .container {
   text-align: center;
   margin: 20px auto;
+  animation: fadeInUp 1s forwards; /* Animation added */
 }
 
 .hover-btn {
@@ -81,6 +92,7 @@
   width: fit-content;
   margin: auto;
   padding: 10px;
+  animation: fadeInUp 1.5s forwards; /* Animation added */
 }
 
 .button {
@@ -92,7 +104,7 @@
   color: #fff;
   border: none;
   border-radius: 30px;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
@@ -107,6 +119,7 @@
 .marketing-desc {
   text-align: center;
   font-size: 17px;
+  animation: fadeInUp 1.8s forwards; /* Animation added */
 }
 
 .marketing-cards {
@@ -116,6 +129,7 @@
   justify-content: center;
   gap: 30px;
   margin-top: 30px;
+  animation: fadeInUp 2s forwards; /* Animation added */
 }
 
 .cards {
@@ -128,15 +142,7 @@
   transition: transform 0.7s ease, box-shadow 0.7s ease;
   position: relative;
   overflow: hidden;
-}
-
-#cloud_css{
-  height: 425px !important;
-
-}
-
-#erp_css{
-  height: 425px !important;
+  animation: fadeInCard 1s ease-out; /* Animation added */
 }
 
 .cards:hover {
@@ -152,6 +158,7 @@
   height: 100%;
   width: 100%;
   border-radius: 50px 0;
+  animation: zoomIn 1s ease-in-out; /* Animation added */
 }
 
 .cards-desc {
@@ -162,6 +169,7 @@
 .cards-desc h2 {
   color: #4682B4;
   margin-bottom: 10px;
+  animation: fadeInUp 2s forwards; /* Animation added */
 }
 
 .cards-btn {
@@ -175,6 +183,7 @@
   background-color: #4682B4;
   color: #fff;
   border-radius: 20px 0;
+  animation: fadeInUp 2s forwards; /* Animation added */
 }
 
 .digital-marketing {
@@ -196,10 +205,12 @@
   align-items: center;
   gap: 50px;
   flex-wrap: wrap;
+  animation: fadeInUp 1.5s forwards; /* Animation added */
 }
 
 .reinvent-img {
   width: 50%;
+  animation: slideInFromLeft 1s ease-out; /* Animation added */
 }
 
 .reinvent-img img {
@@ -216,15 +227,113 @@
 
 .reinvent-desc h3 {
   font-size: 25px;
+  animation: fadeInUp 2s forwards; /* Animation added */
 }
 
 .reinvent-desc h1 {
   color: #4682B4;
+  animation: fadeInUp 1.8s forwards; /* Animation added */
 }
 
 .reinvent-desc p {
   margin: 15px 0;
   font-size: 17px;
+  animation: fadeInUp 2s forwards; /* Animation added */
+}
+
+/* --------Animations--------------------- */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* --------Media Queries for Mobile Responsiveness--------------------- */
@@ -232,108 +341,45 @@
 /* For tablets and smaller screens */
 @media (max-width: 1024px) {
   .home-sub-container {
-      flex-direction: column;
-      height: auto;
-      padding: 20px;
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
   }
 
   .home-sub-container-disc,
   .home-sub-container-img {
-      width: 100%;
-      padding: 20px;
+    width: 100%;
+    padding: 20px;
   }
 
   .marketing-cards {
-      flex-direction: column;
-      gap: 20px;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .cards {
-      width: 90%;
-      height: auto;
+    width: 90%;
+    height: auto;
   }
 
   .business-reinvent {
-      flex-direction: column;
-      padding: 20px;
+    flex-direction: column;
+    padding: 20px;
   }
 
   .reinvent-img,
   .reinvent-desc {
-      width: 100%;
+    width: 100%;
   }
 
   .hover-btn {
-      flex-wrap: wrap;
-      text-align: center;
+    flex-wrap: wrap;
+    text-align: center;
   }
 
-  .button {
-      margin: 5px;
-      width: 90%;
+  /* .button {
+    margin:
   }
-}
+} */
 
-/* For mobile screens */
-@media (max-width: 768px) {
-  .home-sub-container {
-      flex-direction: column;
-      height: auto;
-      padding: 20px;
-  }
-
-  .home-sub-container-disc,
-  .home-sub-container-img {
-      width: 100%;
-      padding: 20px;
-  }
-
-  .marketing-cards {
-      flex-direction: column;
-      gap: 20px;
-  }
-
-  .cards {
-      width: 90%;
-      height: auto;
-  }
-
-  .business-reinvent {
-      flex-direction: column;
-      padding: 20px;
-  }
-
-  .reinvent-img,
-  .reinvent-desc {
-      width: 100%;
-  }
-
-  .hover-btn {
-      flex-wrap: wrap;
-      text-align: center;
-  }
-
-  .button {
-      margin: 5px;
-      width: 90%;
-  }
-}
-
-/* For very small screens (e.g., mobile phones) */
-@media (max-width: 480px) {
-  .home-sub-container-disc h1 {
-      font-size: 20px;
-  }
-
-  .cards-desc {
-      text-align: center;
-  }
-
-  .cards-img img {
-      border-radius: 10px;
-  }
-
-  .reinvent-desc {
-      text-align: justify;
-  }
 }
