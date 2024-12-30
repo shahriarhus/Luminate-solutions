@@ -1,8 +1,8 @@
 
 
-/* .home-main { */
+.home-main {
   /* Add any general styles if needed */
-/* } */
+}
 
 .home-sub-container {
   height: 500px;
@@ -57,7 +57,7 @@
 }
 
 .home-sub-container-img iframe {
-  width: 80%;
+  width: 100%;
   height: 100%;
   border: none;
   object-fit: cover; /* Ensures the content fills the iframe container */
@@ -78,10 +78,6 @@
   margin-bottom: 5px;
   animation: fadeInUp 1.5s forwards; /* Animation added */
 }
-
-/* #container{
-  width: 80% !important;
-} */
 
 /* --------Marketing Section--------------------- */
 
@@ -376,11 +372,11 @@
     width: 80%;
     height: auto;
     box-shadow: none;
-    border-radius: 20px;
+    border-radius: 60px 0;
   }
 
   .cards-img img {
-    border-radius: 20px;
+    border-radius: 60px 0;
   }
 
   .business-reinvent {
@@ -430,11 +426,12 @@
     width: 90%;
     height: auto;
     padding: 15px;
+    border-radius: 60px 0;
   }
 
   .cards-img img {
     height: 100%;
-    border-radius: 10px;
+    border-radius: 60px 0;
   }
 
   .business-reinvent {
@@ -494,11 +491,12 @@
     width: 90%;
     height: auto;
     padding: 10px;
+    border-radius: 50px 0;
   }
 
   .cards-img img {
     height: 100%;
-    border-radius: 10px;
+    border-radius: 50px 0;
   }
 
   .business-reinvent {
@@ -557,13 +555,14 @@
 
   .cards {
     width: 100%;
-    height: auto;
+    height: 400px;
     padding: 10px;
     box-shadow: none;
+    border-radius: 40px 0;
   }
 
   .cards-img img {
-    border-radius: 8px;
+    border-radius: 40px 0;
   }
 
   .business-reinvent {
