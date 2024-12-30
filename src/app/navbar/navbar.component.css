@@ -72,6 +72,7 @@ a:hover {
     text-transform: uppercase;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 501;
 }
 
 .quote-button:hover {
@@ -97,13 +98,14 @@ a:hover {
     .sub-nav {
         padding: 0 20px;
         height: auto;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
     }
 
     .mail-phone {
         flex-direction: column;
-        gap: 20px;
+        gap: 0px;
+        padding: 1%;
         align-items: flex-start;
     }
 }
@@ -115,7 +117,7 @@ a:hover {
     }
 
     .mail-phone {
-        gap: 15px; /* Reduced gap */
+        gap: 0px; /* Reduced gap */
     }
 
     .mail, .phone {
@@ -124,10 +126,16 @@ a:hover {
 
     .quote-button {
         margin-top: 10px;
-        width: 50%;
+        width: 30%;
         text-align: center;
-        font-size: 14px;
+        font-size: 69%;
+        padding: 0px;
+        font-weight: 700;
     }
+
+    /* .quote-button span{
+        font-weight: 100;
+    } */
 }
 
 /* --------Navbar Main Styles (updated for responsiveness)--------------------- */
