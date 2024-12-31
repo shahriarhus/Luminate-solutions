@@ -1,8 +1,6 @@
 
 
-.home-main {
-  /* Add any general styles if needed */
-}
+
 
 .home-sub-container {
   height: 500px;
@@ -844,6 +842,163 @@ h2 {
   line-height: 1.6;
 }
 
+
+.portfolio-section {
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+  overflow: hidden;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.portfolio-header h2 {
+  color: #4682B4;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.portfolio-header h3 {
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.portfolio-slide {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease;
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+}
+
+.project-image {
+  flex: 1;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.project-image:hover img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.project-info h3 {
+  color: #4682B4;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.project-info p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.project-technologies {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.tech-tag {
+  background-color: #e9ecef;
+  color: #4682B4;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.view-website {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 25px;
+  background-color: #4682B4;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.view-website:hover {
+  background-color: #3a6d94;
+  transform: translateY(-2px);
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.nav-button:hover {
+  background-color: #4682B4;
+  color: white;
+}
+
+.prev { left: -25px; }
+.next { right: -25px; }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #4682B4;
+  transform: scale(1.2);
+}
+
 @media (max-width: 768px) {
   .hero h1 {
       font-size: 2rem;
@@ -855,5 +1010,37 @@ h2 {
 
   .services {
       grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 992px) {
+  .project-content {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .project-image, .project-info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-section {
+    padding: 40px 15px;
+  }
+
+  .nav-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .prev { left: -10px; }
+  .next { right: -10px; }
+
+  .project-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-info p {
+    font-size: 1rem;
   }
 }

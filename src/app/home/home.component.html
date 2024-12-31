@@ -372,4 +372,51 @@
         <p>Luminate Web solution offering you all the creative digital design solutions that you need. Design. Develop. Execute</p>
     </div>
 </div>
+
+
+
+<section class="portfolio-section">
+    <div class="portfolio-header">
+      <h2>Portfolio</h2>
+      <h3>Our Premium Projects</h3>
+    </div>
+  
+    <div class="slider-container">
+      <button class="nav-button prev" (click)="prev()">
+        <mat-icon>chevron_left</mat-icon>
+      </button>
+  
+      <div class="portfolio-slide" [@slideAnimation]="currentIndex">
+        <div class="project-content">
+          <div class="project-image">
+            <img [src]="portfolioProjects[currentIndex].image" 
+                 [alt]="portfolioProjects[currentIndex].title">
+          </div>
+          <div class="project-info">
+            <h3>{{portfolioProjects[currentIndex].title}}</h3>
+            <p>{{portfolioProjects[currentIndex].description}}</p>
+            <a [href]="portfolioProjects[currentIndex].link" 
+               class="view-website" 
+               target="_blank">
+              <mat-icon>launch</mat-icon>
+              View Website
+            </a>
+          </div>
+        </div>
+      </div>
+    
+  
+      <button class="nav-button next" (click)="next()">
+        <mat-icon>chevron_right</mat-icon>
+      </button>
+  
+      <div class="pagination">
+        <span *ngFor="let project of portfolioProjects; let i = index" 
+              [class.active]="i === currentIndex"
+              class="dot"
+              (click)="currentIndex = i">
+        </span>
+      </div>
+    </div>
+  </section>
 <!-- <app-chat-widget></app-chat-widget> -->
