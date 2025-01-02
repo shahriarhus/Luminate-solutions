@@ -24,20 +24,20 @@ export class HomeComponent {
   portfolioProjects = [
     {
       title: 'Skill Development HUB',
-      description: 'Leading news website of India with over 10000+ visitors everyday.',
+      description: 'SD Hub website is a skills development hub aimed at empowering individuals by offering job-oriented training programs .',
       image: 'sdhub.png',
       link: 'https://sdhub.in/',
     },
     {
       title: 'Professional Summit',
-      description: 'Advanced healthcare management system for patient records.',
+      description: 'The Professionals Summit 2024 website for watching live event online.',
       image: 'PSF-Summit.png',
-      link: 'https://professionalssummit.com/',
+      link: 'https://professionalssummit.com/online/',
     },
     {
       title: 'Luminate Web Solutions',
-      description: 'Comprehensive learning management system with interactive courses.',
-      image: './Luminate Web Solutions.svg',
+      description: 'Luminate Web Solutions is a company offering expert web development services and digital transformation for businesses.',
+      image: './img.png',
       link: 'https://luminatewebsol.com/',
     },
    

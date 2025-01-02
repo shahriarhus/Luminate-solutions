@@ -654,6 +654,8 @@ h2 {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .stars {
@@ -714,11 +716,11 @@ h2 {
 }
 
 .prev-button {
-  left: -20px;
+  left: 10px;
 }
 
 .next-button {
-  right: -20px;
+  right: 10px;
 }
 
 .prev, .next {
@@ -922,7 +924,8 @@ h2 {
 }
 
 .project-image img {
-  width: 100%;
+  width: 59% !important;
+  margin-left: 20%;
   height: auto;
   transition: transform 0.6s ease;
 }
@@ -946,7 +949,7 @@ h2 {
   color: #666;
   line-height: 1.8;
   font-size: 1.1rem;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 }
 
 .project-technologies {
@@ -983,7 +986,7 @@ h2 {
 
 .nav-button {
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   background-color: white;
   border: none;
