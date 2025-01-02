@@ -239,6 +239,15 @@
   animation: fadeInUp 2s forwards; /* Animation added */
 }
 
+#cloud_css{
+  height: 425px !important;
+
+}
+
+#erp_css{
+  height: 425px !important;
+}
+
 /* --------Animations--------------------- */
 
 @keyframes fadeIn {
@@ -393,6 +402,8 @@
     width: 100%;
     margin-top: 15px;
   }
+
+
 }
 
 /* For Tablets */
@@ -456,6 +467,15 @@
     width: 100%;
     padding: 15px;
     text-align: center;
+  }
+
+  #cloud_css{
+    height: 345px !important;
+  
+  }
+  
+  #erp_css{
+    height: 345px !important;
   }
 }
 
@@ -764,6 +784,15 @@ h2 {
 }
 
 @media (max-width: 768px) {
+
+  #cloud_css{
+    height: 430px !important;
+  }
+  
+  #erp_css{
+    height: 430px !important;
+  }
+
   h2 {
       font-size: 1.75rem;
       margin-bottom: 2rem;
@@ -1042,5 +1071,15 @@ h2 {
 
   .project-info p {
     font-size: 1rem;
+  }
+}
+
+@media only screen and (width: 768px) and (height: 1076px) {
+  #cloud_css{
+    height: 345px !important;
+  }
+  
+  #erp_css{
+    height: 345px !important;
   }
 }
