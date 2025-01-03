@@ -23,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "./",
             "outputPath": "dist/luminate-solutions",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -33,7 +34,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
+              },
+              {
+                "glob": "submit_form.php",
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
@@ -92,11 +99,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/custom-theme.scss"
             ],
             "scripts": []
           }

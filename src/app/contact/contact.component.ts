@@ -1,27 +1,44 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormBuilder, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   loading = false;
 
-  constructor(
-    private fb: FormBuilder,
-  ) {
-    this.contactForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
+  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
+    this.contactForm = this.formBuilder.group({
+      name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
+      phone: ['', Validators.required],
       subject: ['', Validators.required],
-      message: ['', [Validators.required, Validators.minLength(10)]]
+      message: ['', Validators.required],
     });
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
+  ngOnInit(): void {}
+
+  onSubmit(): void {
+    this.loading = true;
+    const formData = this.contactForm.value;
+    this.http.post('http://localhost/lws2/submit_form.php', formData)
+      .subscribe((response: any) => {
+        console.log(response);
+        if (response.success) {
+          console.log('Form data submitted successfully');
+          // You can add additional logic here, such as resetting the form
+        } else {
+          console.error('Error submitting form data:', response.message);
+        }
+        this.loading = false;
+      }, (error) => {
+        console.error('Error:', error);
+        this.loading = false;
+      });
   }
 }

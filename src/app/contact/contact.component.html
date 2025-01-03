@@ -30,30 +30,28 @@
         </div>
       </div>
 
-      <form class="contact-form">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <input type="text" formControlName="name" placeholder="Name" class="form-input">
+          <label for="name">Name:</label>
+          <input type="text" formControlName="name" id="name" class="form-control">
         </div>
-
         <div class="form-group">
-          <input type="email" formControlName="email" placeholder="Email" class="form-input">
+          <label for="email">Email:</label>
+          <input type="email" formControlName="email" id="email" class="form-control">
         </div>
-
         <div class="form-group">
-          <input type="tel" formControlName="phone" placeholder="Phone" class="form-input">
+          <label for="phone">Phone:</label>
+          <input type="tel" formControlName="phone" id="phone" class="form-control">
         </div>
-
         <div class="form-group">
-          <input type="text" formControlName="subject" placeholder="Subject" class="form-input">
+          <label for="subject">Subject:</label>
+          <input type="text" formControlName="subject" id="subject" class="form-control">
         </div>
-
         <div class="form-group">
-          <textarea formControlName="message" placeholder="Message" class="form-input message-input" rows="5"></textarea>
+          <label for="message">Message:</label>
+          <textarea formControlName="message" id="message" class="form-control"></textarea>
         </div>
-
-        <button mat-raised-button color="primary" type="submit">
-          <span>Send Message</span>
-        </button>
+        <button type="submit" [disabled]="loading">Submit</button>
       </form>
     </div>
   </div>
