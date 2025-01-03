@@ -3,20 +3,18 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Include configuration files
+require_once 'database.php';
+require_once 'cors.php';
+
 // Set CORS headers
-header('Access-Control-Allow-Origin: https://luminatewebsol.com/');
-header('Access-Control-Allow-Methods: POST, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
-header('Access-Control-Allow-Credentials: true');
+setCorsHeaders();
 
 // Handle preflight OPTIONS request
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(204);
     exit();
 }
-
-// Set content type for responses
-header('Content-Type: application/json');
 
 // Only allow POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -25,30 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit();
 }
 
-// Database credentials
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "luminatewebsol";
-
-// Get POST data
-$postData = file_get_contents('php://input');
-$data = json_decode($postData, true);
-
-// Validate input data
-if (!$data || !isset($data['name']) || !isset($data['email']) || !isset($data['phone']) || !isset($data['subject']) || !isset($data['message'])) {
-    http_response_code(400);
-    echo json_encode(['error' => 'Invalid input data']);
-    exit();
-}
-
 try {
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Initialize database and get connection
+    $conn = initializeDatabase();
+    
+    // Get POST data
+    $postData = file_get_contents('php://input');
+    $data = json_decode($postData, true);
 
-    // Check connection
-    if ($conn->connect_error) {
-        throw new Exception("Connection failed: " . $conn->connect_error);
+    // Validate input data
+    if (!$data || !isset($data['name']) || !isset($data['email']) || !isset($data['phone']) || !isset($data['subject']) || !isset($data['message'])) {
+        throw new Exception('Invalid input data');
     }
 
     // Prepare and bind
