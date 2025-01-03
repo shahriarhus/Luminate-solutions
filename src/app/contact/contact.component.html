@@ -30,32 +30,51 @@
         </div>
       </div>
 
-      <form class="contact-form">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
         <div class="form-group">
           <input type="text" formControlName="name" placeholder="Name" class="form-input">
+          <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid" class="error-message">
+            <span *ngIf="contactForm.get('name')?.errors?.['required']">Name is required</span>
+            <span *ngIf="contactForm.get('name')?.errors?.['minlength']">Name must be at least 2 characters</span>
+          </div>
         </div>
 
         <div class="form-group">
           <input type="email" formControlName="email" placeholder="Email" class="form-input">
+          <div *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid" class="error-message">
+            <span *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</span>
+            <span *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</span>
+          </div>
         </div>
 
         <div class="form-group">
           <input type="tel" formControlName="phone" placeholder="Phone" class="form-input">
+          <div *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid" class="error-message">
+            <span *ngIf="contactForm.get('phone')?.errors?.['required']">Phone number is required</span>
+            <span *ngIf="contactForm.get('phone')?.errors?.['pattern']">Please enter a valid 10-digit phone number</span>
+          </div>
         </div>
 
         <div class="form-group">
           <input type="text" formControlName="subject" placeholder="Subject" class="form-input">
+          <div *ngIf="contactForm.get('subject')?.touched && contactForm.get('subject')?.invalid" class="error-message">
+            <span *ngIf="contactForm.get('subject')?.errors?.['required']">Subject is required</span>
+          </div>
         </div>
 
         <div class="form-group">
           <textarea formControlName="message" placeholder="Message" class="form-input message-input" rows="5"></textarea>
+          <div *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid" class="error-message">
+            <span *ngIf="contactForm.get('message')?.errors?.['required']">Message is required</span>
+            <span *ngIf="contactForm.get('message')?.errors?.['minlength']">Message must be at least 10 characters</span>
+          </div>
         </div>
 
-        <button mat-raised-button color="primary" type="submit">
-          <span>Send Message</span>
+        <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid || loading">
+          <span *ngIf="!loading">Send Message</span>
+          <mat-spinner *ngIf="loading" diameter="20"></mat-spinner>
         </button>
       </form>
     </div>
   </div>
 </div>
-
