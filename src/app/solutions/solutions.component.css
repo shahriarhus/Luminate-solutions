@@ -13,21 +13,29 @@ body {
     background-color: #f9f9f9;
 }
 
+/* Page Header */
 .page-header {
     text-align: center;
     margin-bottom: 50px;
+    padding: 100px 20px; /* Add padding to create space for the text */
+    background-image: url('/bg101.jpg.png'); /* Replace with your hero image */
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: center; /* Center the image */
+    color: white; /* Make the text color white for better visibility */
+    border-radius: 5px;
+    
 }
 
 .page-header h1 {
     font-size: 2.5rem;
-    color: #2c578a;
+    color: white;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .page-header p {
     font-size: 1.1rem;
-    color: #555;
+    color: white;
     line-height: 1.6;
     max-width: 700px;
     margin: 0 auto;
@@ -202,9 +210,7 @@ body {
     }
 }
 
-
-
-
+/* Learn More Button Hover Animation */
 .learn-more-btn:hover {
     animation: bounce 0.5s ease-in-out;
 }
@@ -217,6 +223,3 @@ body {
         transform: translateY(-5px);
     }
 }
-
-
-

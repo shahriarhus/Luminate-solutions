@@ -1,29 +1,43 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
-  ngOnInit(): void {
-    const dropdownMenu = document.querySelector('.dropdown-content');
-    const solutionsMenu = document.querySelector('.dropdown');
+export class NavbarComponent implements OnInit {
+  private dropdownTimeout: any;
+  isMenuOpen = false;
 
-    if (solutionsMenu) {
-      solutionsMenu.addEventListener('mouseover', () => {
-        dropdownMenu?.classList.add('open');
-      });
-    }
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
-    if (dropdownMenu) {
-      dropdownMenu.addEventListener('mouseenter', () => {
-        dropdownMenu.classList.add('open');
-      });
+  ngOnInit() {
+    const dropdown = this.el.nativeElement.querySelector('.dropdown');
+    const dropdownContent = this.el.nativeElement.querySelector('.dropdown-content');
 
-      dropdownMenu.addEventListener('mouseleave', () => {
-        dropdownMenu.classList.remove('open');
-      });
-    }
+    this.renderer.listen(dropdown, 'mouseenter', () => {
+      clearTimeout(this.dropdownTimeout);
+      this.renderer.addClass(dropdownContent, 'show');
+    });
+
+    this.renderer.listen(dropdown, 'mouseleave', () => {
+      this.dropdownTimeout = setTimeout(() => {
+        this.renderer.removeClass(dropdownContent, 'show');
+      }, 300); // 300ms delay before hiding the dropdown
+    });
+
+    this.renderer.listen(dropdownContent, 'mouseenter', () => {
+      clearTimeout(this.dropdownTimeout);
+    });
+
+    this.renderer.listen(dropdownContent, 'mouseleave', () => {
+      this.dropdownTimeout = setTimeout(() => {
+        this.renderer.removeClass(dropdownContent, 'show');
+      }, 300); // 300ms delay before hiding the dropdown
+    });
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

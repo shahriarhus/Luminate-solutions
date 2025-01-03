@@ -1,44 +1,144 @@
-/* Existing styles */
-.sub-nav{
+/* --------Sub-Nav Styles (updated for responsiveness)--------------------- */
+/* General Sub-nav Styles */
+.sub-nav {
     background-color: #4682B4;
-    height: 40px;
+    height: 60px;
     display: flex;
     align-items: center;
-    padding: 0 200px 0 50px;
+    padding: 0 30px;
+    justify-content: space-between;
+    transition: all 0.3s ease;
 }
 
-.mail-phone{
+/* Mail and Phone Section Styling */
+.mail-phone {
     color: #fff;
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-out;
 }
 
-a{
+a {
     color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-a:hover{
-    color: black;
+a:hover {
+    color: #154d7a;
+    text-decoration: underline;
 }
 
-.mail{
+/* Individual mail and phone icon styles */
+.mail, .phone {
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
-.mail p{
-    margin-bottom: 1.5%;
+.mail mat-icon, .phone mat-icon {
+    color: #fff;
+    font-size: 20px;
+    transition: transform 0.3s ease;
 }
 
-.phone{
-    display: flex;
-    align-items: center;
+/* Add a hover effect on icons */
+.mail:hover mat-icon, .phone:hover mat-icon {
+    transform: scale(1.1);
 }
 
-.phone p{
-    margin-bottom: 1.5%;
+/* Styling for phone and mail texts */
+.mail p, .phone p {
+    margin-bottom: 0;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
 }
+
+/* Add hover effect for text */
+.mail:hover p, .phone:hover p {
+    opacity: 0.8;
+}
+
+/* Quote button styling */
+.quote-button {
+    background-color: #fff;
+    color: #4682B4;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 501;
+}
+
+.quote-button:hover {
+    background-color: #4682B4;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Sub-nav for Tablets and Smaller Screens */
+@media (max-width: 1024px) {
+    .sub-nav {
+        padding: 0 20px;
+        height: auto;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .mail-phone {
+        flex-direction: column;
+        gap: 0px;
+        padding: 1%;
+        align-items: flex-start;
+    }
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+    .sub-nav {
+        padding: 0 15px; /* Reduced padding */
+    }
+
+    .mail-phone {
+        gap: 0px; /* Reduced gap */
+    }
+
+    .mail, .phone {
+        font-size: 14px; /* Smaller font size for better fit */
+    }
+
+    .quote-button {
+        margin-top: 10px;
+        width: 30%;
+        text-align: center;
+        font-size: 69%;
+        padding: 0px;
+        font-weight: 700;
+    }
+
+    /* .quote-button span{
+        font-weight: 100;
+    } */
+}
+
+/* --------Navbar Main Styles (updated for responsiveness)--------------------- */
 
 .navbar {
     height: 80px;
@@ -77,6 +177,7 @@ a:hover{
     margin-right: 100px;
 }
 
+/* Navbar links */
 .nav-list a {
     text-decoration: none;
     color: #4682B4;
@@ -88,7 +189,7 @@ a:hover{
     transition: all 0.3s ease-in-out;
 }
 
-/* New dropdown styles */
+/* Dropdown Styles */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -113,7 +214,7 @@ a:hover{
     left: -100px;
     background-color: #fff;
     min-width: 600px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 1001;
     border-radius: 8px;
     padding: 20px;
@@ -121,15 +222,12 @@ a:hover{
     transition: opacity 0.3s, visibility 0.3s;
 }
 
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover .dropdown-content {
     display: block;
-    opacity: 1;
-  visibility: visible;
-}
+} */
 
-.dropdown-content:hover {
-    opacity: 1;
-    visibility: visible;
+.dropdown-content.show {
+    display: block;
   }
 
 .dropdown-columns {
@@ -162,7 +260,91 @@ a:hover{
     color: #4682B4;
 }
 
-/* Existing hover effects */
+/* Burger Menu Styles */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: #4682B4;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Show burger menu in mobile view */
+@media (max-width: 1024px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #DEEDFA;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+    
+
+    .nav-list a {
+        margin: 10px 0;
+        padding: 15px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list a:hover {
+        color: black;
+    }
+}
+
+/* Further fine-tuning on very small screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-list {
+        margin-right: 0;
+        width: 100%;
+        left: 0;
+        top: 60px;
+    }
+
+    .nav-list a {
+        font-size: 16px;
+    }
+
+    .dropdown-content {
+        min-width: 300px;
+        left: -100px;
+    }
+
+    .dropdown-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dropdown-column {
+        flex: none;
+    }
+}
+
+/* Smooth transitions for dropdown and nav items */
 .nav-list a::after {
     content: '';
     display: block;
@@ -175,58 +357,6 @@ a:hover{
     left: 0;
 }
 
-.nav-list a:hover {
-    color: #2c578a;
-}
-.quote-button {
-    margin-left: 1000px;
-    background-color: #ff4444;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 4px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  .quote-button:hover {
-    background-color: #ff2222;
-    color: white;
-  }
-
 .nav-list a:hover::after {
     width: 100%;
 }
-
-.navbar.sticky {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive styles */
-@media (max-width: 1024px) {
-    .dropdown-content {
-        min-width: 500px;
-        left: -50px;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0 20px;
-    }
-    
-    .nav-list {
-        margin-right: 0;
-    }
-    
-    .dropdown-content {
-        min-width: 300px;
-        left: -100px;
-    }
-    
-    .dropdown-columns {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
