@@ -23,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "./",
             "outputPath": "dist/luminate-solutions",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -33,15 +34,20 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
+              },
+              {
+                "glob": "cors.php,db.php",
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
               "src/custom-theme.scss",
               "src/styles.css"
             ],
-            "scripts": [],
-            "baseHref": "./"
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -93,11 +99,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/custom-theme.scss"
             ],
             "scripts": []
           }
