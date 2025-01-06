@@ -38,10 +38,21 @@
                 "output": "/"
               },
               {
-                "glob": "cors.php,db.php",
-                "input": "public",
+                "glob": "db.php",
+                "input": "src/app",
+                "output": "/"
+              },
+              {
+                "glob": "cors.php",
+                "input": "src/app",
+                "output": "/"
+              },
+              {
+                "glob": "database.php",
+                "input": "src/app",
                 "output": "/"
               }
+
             ],
             "styles": [
               "src/custom-theme.scss",
