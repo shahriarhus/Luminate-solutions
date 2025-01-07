@@ -34,7 +34,31 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
+                "input": "public"
+              },
+              {
+                "glob": "db.php",
+                "input": "src/app",
+                "output": "/"
+              },
+              {
+                "glob": "login.php",
+                "input": "src/app",
+                "output": "/"
+              },
+              {
+                "glob":"cors.php",
+                "input":"src/app",
+                "output": "/"
+              },
+              {
+                "glob":"database.php",
+                "input":"src/app",
+                "output": "/"
+              },
+              {
+                "glob":"credentials.php",
+                "input":"src/api",
                 "output": "/"
               },
               {
@@ -54,6 +78,11 @@
               },
               {
                 "glob": "contact-details.php",
+                "input": "src/app",
+                "output": "/"
+              },
+              {
+                "glob": "quote.php",
                 "input": "src/app",
                 "output": "/"
               }

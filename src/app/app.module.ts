@@ -28,7 +28,6 @@ import { FooterComponent } from './footer/footer.component';
 import { NoopAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-// import { trigger } from '@angular/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -43,7 +42,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactDetailsComponent } from './dashboard/contact-details/contact-details.component';
 import { QuoteDetailsComponent } from './dashboard/quote-details/quote-details.component';
-
+import { LoginComponent } from './login/login.component';
+import { MatLabel } from '@angular/material/form-field';
 
 
 @NgModule({
@@ -65,6 +65,7 @@ import { QuoteDetailsComponent } from './dashboard/quote-details/quote-details.c
     DashboardComponent,
     ContactDetailsComponent,
     QuoteDetailsComponent,
+    LoginComponent,
     
     
   ],
@@ -87,7 +88,8 @@ import { QuoteDetailsComponent } from './dashboard/quote-details/quote-details.c
     MatListModule,
     MatPaginatorModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    MatLabel
 
   ],
   providers: [
@@ -96,11 +98,8 @@ import { QuoteDetailsComponent } from './dashboard/quote-details/quote-details.c
     importProvidersFrom(NoopAnimationsModule),
   ],
   bootstrap: [AppComponent],
-  // animations: [
-  //   trigger('open')
-  // ]
 })
-export class AppModule { 
+export class AppModule {
   bootstrap = bootstrapApplication(AppComponent, {
     providers: [
       provideAnimationsAsync(),

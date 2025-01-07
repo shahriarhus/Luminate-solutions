@@ -15,6 +15,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactDetailsComponent } from './dashboard/contact-details/contact-details.component';
 import { QuoteDetailsComponent } from './dashboard/quote-details/quote-details.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -24,11 +25,13 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'footer', component: FooterComponent},
   {path: 'privacy', component: PrivacyPolicyComponent},
+ 
   {path: 'terms&conditions', component: TermsConditionsComponent},
   {path: 'Disclaimer', component: DisclaimerComponent},
   {path: 'Refund Policy', component: RefundPolicyComponent},
   {path: 'Cancellation Policy', component: CancellationPolicyComponent},
   {path: 'quote', component: QuoteFormComponent},
+  {path: 'login', component: LoginComponent},
   // {path: 'dashboard', component: DashboardComponent},
   // {path:'contactdt', component: ContactDetailsComponent},
   // { path: '**', redirectTo: '', pathMatch: 'full' },

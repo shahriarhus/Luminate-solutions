@@ -13,7 +13,7 @@
         <input matInput formControlName="projectName" required>
       </mat-form-field>
     </div>
-
+  
     <!-- Website Details -->
     <div class="form-section">
       <h3>Website Details</h3>
@@ -23,7 +23,7 @@
         <textarea matInput formControlName="websiteDetails" rows="4"></textarea>
       </mat-form-field>
     </div>
-
+  
     <!-- Website Focus -->
     <div class="form-section" formGroupName="websiteFocus">
       <h3>What will be the focus of the website?</h3>
@@ -44,107 +44,113 @@
           Blog
         </mat-checkbox>
         <mat-checkbox formControlName="forum">
-          Forum / Social Interaction
+          Forum
         </mat-checkbox>
         <mat-checkbox formControlName="personal">
-          Personal Website
+          Personal
         </mat-checkbox>
       </div>
     </div>
-
+  
     <!-- Additional Features -->
     <div class="form-section" formGroupName="additionalFeatures">
       <h3>Additional Features</h3>
       <div class="checkbox-group">
         <mat-checkbox formControlName="additionalLanguages">
-          Additional Languages (only Static Content)
+          Additional Languages
         </mat-checkbox>
         <mat-checkbox formControlName="companyEmails">
-          Emails (Company Emails)
+          Company Emails
         </mat-checkbox>
         <mat-checkbox formControlName="mobileResponsive">
-          Mobile Responsive (Mobile/Tablet Enabled)
+          Mobile Responsive
         </mat-checkbox>
         <mat-checkbox formControlName="seo">
-          SEO (Search Engine Optimization) - Onsite
+          SEO
         </mat-checkbox>
         <mat-checkbox formControlName="sem">
-          SEM (Search Engine Marketing) - Using Adwords
+          SEM
         </mat-checkbox>
         <mat-checkbox formControlName="facebookMarketing">
           Facebook Marketing
         </mat-checkbox>
         <mat-checkbox formControlName="googleAnalytics">
-          Google Website Analytic Integration (Visitor Statistics)
+          Google Analytics
         </mat-checkbox>
         <mat-checkbox formControlName="liveChat">
-          Live Chat Integration
+          Live Chat
         </mat-checkbox>
       </div>
     </div>
-
+  
     <!-- Website Pages -->
     <div class="form-section" formGroupName="websitePages">
-      <h3>What are some of the pages/content that your website should have</h3>
+      <h3>Website Pages</h3>
       <div class="checkbox-group">
-        <mat-checkbox formControlName="home">Home</mat-checkbox>
-        <mat-checkbox formControlName="aboutUs">About Us</mat-checkbox>
-        <mat-checkbox formControlName="missionVision">Mission & Vision</mat-checkbox>
-        <mat-checkbox formControlName="clients">Our Clients</mat-checkbox>
-        <mat-checkbox formControlName="testimonials">Client Testimonials</mat-checkbox>
-        <mat-checkbox formControlName="photoGallery">Photo Gallery</mat-checkbox>
-        <mat-checkbox formControlName="videoGallery">Video Gallery</mat-checkbox>
-        <mat-checkbox formControlName="audioGallery">Audio Gallery</mat-checkbox>
-        <mat-checkbox formControlName="products">Products</mat-checkbox>
-        <mat-checkbox formControlName="services">Services</mat-checkbox>
-        <mat-checkbox formControlName="contactUs">Contact Us</mat-checkbox>
+        <mat-checkbox formControlName="home">
+          Home
+        </mat-checkbox>
+        <mat-checkbox formControlName="aboutUs">
+          About Us
+        </mat-checkbox>
+        <mat-checkbox formControlName="missionVision">
+          Mission & Vision
+        </mat-checkbox>
+        <mat-checkbox formControlName="clients">
+          Clients
+        </mat-checkbox>
+        <mat-checkbox formControlName="testimonials">
+          Testimonials
+        </mat-checkbox>
+        <mat-checkbox formControlName="photoGallery">
+          Photo Gallery
+        </mat-checkbox>
+        <mat-checkbox formControlName="videoGallery">
+          Video Gallery
+        </mat-checkbox>
+        <mat-checkbox formControlName="audioGallery">
+          Audio Gallery
+        </mat-checkbox>
+        <mat-checkbox formControlName="products">
+          Products
+        </mat-checkbox>
+        <mat-checkbox formControlName="services">
+          Services
+        </mat-checkbox>
+        <mat-checkbox formControlName="contactUs">
+          Contact Us
+        </mat-checkbox>
       </div>
     </div>
-
-    <!-- Number of Pages -->
+  
+    <!-- Other Details -->
     <div class="form-section">
-      <h3>Roughly, how many pages will your website include?</h3>
-      <mat-radio-group formControlName="numberOfPages" class="radio-group">
-        <mat-radio-button value="1-10">1-10</mat-radio-button>
-        <mat-radio-button value="10-30">10-30</mat-radio-button>
-        <mat-radio-button value="30+">30+</mat-radio-button>
-      </mat-radio-group>
-    </div>
-
-    <!-- Reference Websites -->
-    <div class="form-section">
-      <h3>List of Reference websites</h3>
-      <p class="subtitle">You can type below websites which you like or want your website to be similar to it.</p>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Number of Pages</mat-label>
+        <input matInput formControlName="numberOfPages">
+      </mat-form-field>
+  
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>Reference Websites</mat-label>
-        <textarea matInput formControlName="referenceWebsites" rows="3"></textarea>
+        <input matInput formControlName="referenceWebsites">
       </mat-form-field>
-    </div>
-
-    <!-- Email Accounts -->
-    <div class="form-section">
+  
       <mat-form-field appearance="outline" class="full-width">
-        <mat-label>How Many Company Email Accounts do you need?</mat-label>
-        <input matInput formControlName="emailAccounts" type="number">
+        <mat-label>Email Accounts</mat-label>
+        <input matInput formControlName="emailAccounts">
       </mat-form-field>
-    </div>
-
-    <!-- Objective -->
-    <div class="form-section">
+  
       <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Objective of this website</mat-label>
+        <mat-label>Objective</mat-label>
         <textarea matInput formControlName="objective" rows="4"></textarea>
       </mat-form-field>
-    </div>
-
-    <!-- Website Description -->
-    <div class="form-section">
+  
       <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Describe how do you want your website to be</mat-label>
+        <mat-label>Website Description</mat-label>
         <textarea matInput formControlName="websiteDescription" rows="4"></textarea>
       </mat-form-field>
     </div>
-
+  
     <!-- Contact Information -->
     <div class="form-section" formGroupName="contact">
       <h3>Contact Us</h3>
@@ -153,64 +159,47 @@
           <mat-label>Name</mat-label>
           <input matInput formControlName="name" required>
         </mat-form-field>
-
+  
         <mat-form-field appearance="outline">
           <mat-label>Phone</mat-label>
           <input matInput formControlName="phone" type="tel">
         </mat-form-field>
-
+  
         <mat-form-field appearance="outline">
           <mat-label>Email</mat-label>
           <input matInput formControlName="email" type="email" required>
         </mat-form-field>
       </div>
     </div>
-
+  
     <!-- Budget Information -->
     <div class="form-section">
       <div class="budget-grid">
-        <!-- <mat-form-field appearance="outline">
-          <mat-label>Currency</mat-label>
-          <mat-select formControlName="currency" required>
-            <mat-option *ngFor="let currency of currencies" [value]="currency">
-              {{currency}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field> -->
-
         <mat-form-field appearance="outline">
           <mat-label>What is your budget for web development?</mat-label>
           <input matInput formControlName="budget" type="number" required>
         </mat-form-field>
-
+  
         <mat-form-field appearance="outline">
           <mat-label>Discount Coupon (if any)</mat-label>
           <input matInput formControlName="discountCoupon">
         </mat-form-field>
       </div>
     </div>
-
-    <!-- Reference Person -->
-    <div class="form-section">
-      <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Reference Person (if any)</mat-label>
-        <input matInput formControlName="referencePerson">
-      </mat-form-field>
-    </div>
-
-    <!-- File Upload -->
-    <div class="form-section">
-      <h3>Scope of work / RFP</h3>
-      <p class="subtitle">Upload scope of work / RFP</p>
-      <div class="file-upload">
-        <input type="file" (change)="onFileSelected($event)" accept=".pdf,.doc,.docx">
-        <p class="file-hint">Max. file size: {{maxFileSize}} MB.</p>
-      </div>
-    </div>
-
+  
+    <!-- Currency Field (Commented Out) -->
+    <!-- <mat-form-field appearance="outline">
+      <mat-label>Currency</mat-label>
+      <mat-select formControlName="currency" required>
+        <mat-option *ngFor="let currency of currencies" [value]="currency">
+          {{currency}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field> -->
+  
     <!-- Submit Button -->
     <div class="form-actions">
-      <button mat-raised-button color="primary" type="submit">Submit Inquiry</button>
+      <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Submit Inquiry</button>
     </div>
   </form>
 </div>

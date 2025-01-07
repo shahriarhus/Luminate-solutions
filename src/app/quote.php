@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 // Only allow POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    header('Content-Type: application/json');
     echo json_encode(['error' => 'Method not allowed']);
     exit();
 }
@@ -33,47 +32,59 @@ try {
     $data = json_decode($postData, true);
 
     // Validate input data
-    if (!$data || !isset($data['name']) || !isset($data['email']) || !isset($data['phone']) || !isset($data['subject']) || !isset($data['message'])) {
+    if (!$data || !isset($data['projectName']) || !isset($data['contact']['name']) || !isset($data['contact']['email'])) {
         throw new Exception('Invalid input data');
     }
 
     // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO contact_form (name, email, phone, subject, message) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO quote_form (project_name, website_details, website_focus, additional_features, website_pages, number_of_pages, reference_websites, email_accounts, objective, website_description, contact_name, contact_phone, contact_email, currency, budget, discount_coupon, reference_person) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     
     if (!$stmt) {
         throw new Exception("Prepare failed: " . $conn->error);
     }
 
-    $stmt->bind_param("sssss", 
-        $data['name'],
-        $data['email'],
-        $data['phone'],
-        $data['subject'],
-        $data['message']
+    $websiteFocus = json_encode($data['websiteFocus']);
+    $additionalFeatures = json_encode($data['additionalFeatures']);
+    $websitePages = json_encode($data['websitePages']);
+    
+    $stmt->bind_param("sssssssssssssssss", 
+        $data['projectName'],
+        $data['websiteDetails'],
+        $websiteFocus,
+        $additionalFeatures,
+        $websitePages,
+        $data['numberOfPages'],
+        $data['referenceWebsites'],
+        $data['emailAccounts'],
+        $data['objective'],
+        $data['websiteDescription'],
+        $data['contact']['name'],
+        $data['contact']['phone'],
+        $data['contact']['email'],
+        $data['currency'],
+        $data['budget'],
+        $data['discountCoupon'],
+        $data['referencePerson']
     );
 
     // Execute the statement
     if ($stmt->execute()) {
         http_response_code(200);
-        header('Content-Type: application/json');
         echo json_encode([
             'success' => true,
-            'message' => 'Message sent successfully'
+            'message' => 'Quote submitted successfully'
         ]);
     } else {
         throw new Exception("Execute failed: " . $stmt->error);
     }
 
-} 
-catch (Exception $e) {
+} catch (Exception $e) {
     http_response_code(500);
-    header('Content-Type: application/json');
     echo json_encode([
         'success' => false,
         'error' => $e->getMessage()
     ]);
-} 
-finally {
+} finally {
     if (isset($stmt)) {
         $stmt->close();
     }
