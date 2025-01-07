@@ -51,6 +51,11 @@
                 "glob": "database.php",
                 "input": "src/app",
                 "output": "/"
+              },
+              {
+                "glob": "quote.php",
+                "input": "src/app",
+                "output": "/"
               }
 
             ],
