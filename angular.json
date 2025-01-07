@@ -34,8 +34,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
-                "output": "/"
+                "input": "public"
               },
               {
                 "glob": "db.php",
@@ -43,16 +42,25 @@
                 "output": "/"
               },
               {
-                "glob": "cors.php",
-                "input": "src/app",
+                "glob": "login.php",
+                "input": "src/api",
                 "output": "/"
               },
               {
-                "glob": "database.php",
-                "input": "src/app",
+                "glob":"cors.php",
+                "input":"src/app",
+                "output": "/"
+              },
+              {
+                "glob":"database.php",
+                "input":"src/app",
+                "output": "/"
+              },
+              {
+                "glob":"credentials.php",
+                "input":"src/api",
                 "output": "/"
               }
-
             ],
             "styles": [
               "src/custom-theme.scss",

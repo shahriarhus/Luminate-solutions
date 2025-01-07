@@ -50,4 +50,8 @@ function initializeDatabase() {
         throw new Exception("Database initialization failed: " . $e->getMessage());
     }
 }
+
+
+
+
 ?>

@@ -1,0 +1,19 @@
+<div class="login-wrapper">
+    <iframe src="https://lottie.host/embed/0d0566fa-8d7f-458b-a2a4-e9b6625ed816/IXUCLWOLPc.lottie"></iframe>
+    <div class="login-container">
+        <div class="login-form">
+            <h1>Welcome Back</h1>
+            <form (submit)="onSubmit()">
+                <div class="input-group">
+                    <input type="text" id="username" name="username" [(ngModel)]="username" placeholder="Username" required>
+                    <label for="username">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Password" required>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit" class="login-button">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
