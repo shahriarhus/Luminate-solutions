@@ -1,8 +1,9 @@
+<app-navbar></app-navbar>
 <div class="login-wrapper">
     <iframe src="https://lottie.host/embed/0d0566fa-8d7f-458b-a2a4-e9b6625ed816/IXUCLWOLPc.lottie"></iframe>
     <div class="login-container">
         <div class="login-form">
-            <h1>Welcome Back</h1>
+            <h1>Admin Login</h1>
             <form (submit)="onSubmit()">
                 <div class="input-group">
                     <input type="text" id="username" name="username" [(ngModel)]="username" placeholder="Username" required>
@@ -16,4 +17,10 @@
             </form>
         </div>
     </div>
+</div>
+<a href="https://wa.me/917207367455" target="_blank" class="whatsapp-float">
+    <img src="./whatsapp.png" alt="WhatsApp">
+  </a> 
+  <div class="footer">
+    <app-footer />
 </div>
