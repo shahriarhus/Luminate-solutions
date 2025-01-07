@@ -36,7 +36,7 @@ const routes: Routes = [
   // {path:'contactdt', component: ContactDetailsComponent},
   // { path: '**', redirectTo: '', pathMatch: 'full' },
   {
-    path: '',
+    path: 'dashboard',
     component: DashboardComponent,
     children: [
       { path: 'contactdt', component: ContactDetailsComponent },
