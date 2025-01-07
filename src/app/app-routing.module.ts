@@ -13,7 +13,7 @@ import { RefundPolicyComponent } from './footer/refund-policy/refund-policy.comp
 import { DisclaimerComponent } from './footer/disclaimer/disclaimer.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 
 const routes: Routes = [
@@ -24,7 +24,7 @@ const routes: Routes = [
   {path: 'contact', component: ContactComponent},
   {path: 'footer', component: FooterComponent},
   {path: 'privacy', component: PrivacyPolicyComponent},
-  {path: 'dashboard', component: DashboardComponent},
+ 
   {path: 'terms&conditions', component: TermsConditionsComponent},
   {path: 'Disclaimer', component: DisclaimerComponent},
   {path: 'Refund Policy', component: RefundPolicyComponent},

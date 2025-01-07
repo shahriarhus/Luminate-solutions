@@ -32,7 +32,7 @@ import { CancellationPolicyComponent } from './footer/cancellation-policy/cancel
 import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { MatLabel } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ChatWidgetComponent,
     QuoteFormComponent,
     LoginComponent,
-    DashboardComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -66,7 +66,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ReactiveFormsModule,
     MatRadioModule,
     MatProgressSpinnerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatLabel
   ],
   providers: [
     provideHttpClient(),
