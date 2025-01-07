@@ -1,0 +1,26 @@
+.mat-elevation-z8 {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .mat-cell, .mat-header-cell {
+    padding: 0 15px;
+  }
+  
+  .mat-row:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .action-button {
+    margin: 0 4px;
+  }
+  

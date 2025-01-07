@@ -85,6 +85,11 @@
                 "glob": "quote.php",
                 "input": "src/app",
                 "output": "/"
+              },
+              {
+                "glob": "get-quotes.php",
+                "input": "src/app",
+                "output": "/"
               }
             ],
             "styles": [

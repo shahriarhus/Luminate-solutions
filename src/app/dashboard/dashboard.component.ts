@@ -12,10 +12,8 @@ export class DashboardComponent {
   @ViewChild('sidenav') sidenav!: MatSidenav;
 
   navItems = [
-    // { icon: 'dashboard', label: 'Dashboard', link: '/' },
-    { icon: 'person', label: 'Contact Details', link: '/contactdt' },
-    { icon: 'groups', label: 'Quote', link: '/quotedt' },
-    // { icon: 'account_circle', label: 'Profile', link: '/' },
+    { icon: 'person', label: 'Contact Details', link: '/dashboard/contactdt' },
+    { icon: 'groups', label: 'Quote', link: '/dashboard/quotedt' },
   ];
 
   constructor(
