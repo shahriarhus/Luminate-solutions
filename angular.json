@@ -60,6 +60,11 @@
                 "glob":"credentials.php",
                 "input":"src/api",
                 "output": "/"
+              },
+              {
+                "glob": "quote.php",
+                "input": "src/app",
+                "output": "/"
               }
             ],
             "styles": [

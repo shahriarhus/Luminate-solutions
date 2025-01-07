@@ -14,7 +14,7 @@ export interface ContactFormData {
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'https://luminatewebsol.com/db.php';
+  private apiUrl = 'http://localhost/lws2/db.php';
 
   constructor(private http: HttpClient) {}
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { QuoteFormService } from '../services/quote-form.service';
+import { QuoteFormData } from '../services/quote-form.service';
 
 @Component({
   selector: 'app-quote-form',
@@ -11,7 +13,7 @@ export class QuoteFormComponent implements OnInit  {
   currencies = ['USD', 'EUR', 'GBP', 'INR'];
   maxFileSize = 64; // MB
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private quoteFormService: QuoteFormService) {
     this.quoteForm = this.fb.group({
       projectName: ['', Validators.required],
       websiteDetails: [''],
@@ -76,6 +78,13 @@ export class QuoteFormComponent implements OnInit  {
       }
     }
   }
+  onSubmit() {
+    console.log('Submit button clicked');
+    const formData: QuoteFormData = this.quoteForm.value;
+    this.quoteFormService.submitQuoteForm(formData).subscribe(response => {
+      console.log('Form submitted successfully', response);
+    }, error => {
+      console.error('Error submitting form', error);
+    });
   }
-
-
+}
