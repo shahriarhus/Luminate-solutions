@@ -5,21 +5,14 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'luminatewebsol');
 
-// Create database connection
-function getConnection() {
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS);
-    
-    if ($conn->connect_error) {
-        throw new Exception("Connection failed: " . $conn->connect_error);
-    }
-    
-    return $conn;
-}
-
-// Initialize database and tables
 function initializeDatabase() {
     try {
-        $conn = getConnection();
+        // Create connection
+        $conn = new mysqli(DB_HOST, DB_USER, DB_PASS);
+        
+        if ($conn->connect_error) {
+            throw new Exception("Connection failed: " . $conn->connect_error);
+        }
         
         // Create database if not exists
         $sql = "CREATE DATABASE IF NOT EXISTS " . DB_NAME;

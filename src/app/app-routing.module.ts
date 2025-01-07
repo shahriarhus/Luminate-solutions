@@ -12,6 +12,8 @@ import { CancellationPolicyComponent } from './footer/cancellation-policy/cancel
 import { RefundPolicyComponent } from './footer/refund-policy/refund-policy.component';
 import { DisclaimerComponent } from './footer/disclaimer/disclaimer.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ContactDetailsComponent } from './dashboard/contact-details/contact-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,9 +28,9 @@ const routes: Routes = [
   {path: 'Refund Policy', component: RefundPolicyComponent},
   {path: 'Cancellation Policy', component: CancellationPolicyComponent},
   {path: 'quote', component: QuoteFormComponent},
+  {path: 'dashboard', component: DashboardComponent},
+  {path:'contact_details', component: ContactDetailsComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' },
-
-
 ];
 
 @NgModule({

@@ -8,6 +8,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table'; 
+import { MatSortModule } from '@angular/material/sort';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,6 +39,8 @@ import { RefundPolicyComponent } from './footer/refund-policy/refund-policy.comp
 import { CancellationPolicyComponent } from './footer/cancellation-policy/cancellation-policy.component';
 import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ContactDetailsComponent } from './dashboard/contact-details/contact-details.component';
 
 
 
@@ -52,6 +60,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     CancellationPolicyComponent,
     ChatWidgetComponent,
     QuoteFormComponent,
+    DashboardComponent,
+    ContactDetailsComponent,
     
     
   ],
@@ -68,7 +78,14 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     ReactiveFormsModule,
     MatRadioModule,
     MatProgressSpinnerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatPaginatorModule,
+    MatTableModule,
+    MatSortModule
+
   ],
   providers: [
     provideHttpClient(),

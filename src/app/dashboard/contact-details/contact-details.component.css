@@ -1,0 +1,35 @@
+.mat-elevation-z8 {
+  margin: 20px;
+  overflow: auto;
+}
+
+.button {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  padding: 8px 16px;
+}
+
+.mat-column-message {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
