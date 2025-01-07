@@ -9,7 +9,6 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -21,7 +20,6 @@ import { FooterComponent } from './footer/footer.component';
 import { NoopAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-// import { trigger } from '@angular/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -33,8 +31,8 @@ import { RefundPolicyComponent } from './footer/refund-policy/refund-policy.comp
 import { CancellationPolicyComponent } from './footer/cancellation-policy/cancellation-policy.component';
 import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
-
-
+import { LoginComponent } from './login/login.component';
+import { MatLabel } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -52,7 +50,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     CancellationPolicyComponent,
     ChatWidgetComponent,
     QuoteFormComponent,
-    
+    LoginComponent,
     
   ],
   imports: [
@@ -68,7 +66,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     ReactiveFormsModule,
     MatRadioModule,
     MatProgressSpinnerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatLabel
   ],
   providers: [
     provideHttpClient(),
@@ -76,11 +75,8 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
     importProvidersFrom(NoopAnimationsModule),
   ],
   bootstrap: [AppComponent],
-  // animations: [
-  //   trigger('open')
-  // ]
 })
-export class AppModule { 
+export class AppModule {
   bootstrap = bootstrapApplication(AppComponent, {
     providers: [
       provideAnimationsAsync(),
