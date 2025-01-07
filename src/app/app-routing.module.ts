@@ -16,6 +16,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactDetailsComponent } from './dashboard/contact-details/contact-details.component';
 import { QuoteDetailsComponent } from './dashboard/quote-details/quote-details.component';
 import { LoginComponent } from './login/login.component';
+import { authGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,15 +33,17 @@ const routes: Routes = [
   {path: 'Cancellation Policy', component: CancellationPolicyComponent},
   {path: 'quote', component: QuoteFormComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'dashboard', component: DashboardComponent},
+  // {path: 'dashboard', component: DashboardComponent},
   // {path:'contactdt', component: ContactDetailsComponent},
   // {path:'quotedt', component: QuoteDetailsComponent},
-  {
-    path: '',
+  { 
+    path: 'dashboard',
     component: DashboardComponent,
+    canActivate: [authGuard],
     children: [
+      { path: '', redirectTo: 'contactdt', pathMatch: 'full' },
       { path: 'contactdt', component: ContactDetailsComponent },
-      { path: 'quotedt', component: QuoteDetailsComponent },
+      { path: 'quotedt', component: QuoteDetailsComponent }
     ]
   },
   { path: '**', redirectTo: '', pathMatch: 'full' },
