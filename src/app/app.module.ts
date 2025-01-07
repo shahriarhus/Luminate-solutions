@@ -51,7 +51,7 @@ import { MatLabel } from '@angular/material/form-field';
     ChatWidgetComponent,
     QuoteFormComponent,
     LoginComponent,
-    
+
   ],
   imports: [
     BrowserModule,

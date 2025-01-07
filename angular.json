@@ -43,7 +43,7 @@
               },
               {
                 "glob": "login.php",
-                "input": "src/api",
+                "input": "src/app",
                 "output": "/"
               },
               {

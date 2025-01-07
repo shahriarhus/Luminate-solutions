@@ -32,7 +32,7 @@ if (isset($data['username']) && isset($data['password'])) {
     $servername = "localhost";
     $dbusername = "root"; // Replace with your database username
     $dbpassword = ""; // Replace with your database password
-    $dbname = "lws2"; // Replace with your database name
+    $dbname = "luminatewebsol"; // Replace with your database name
 
     // Create connection
     $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);

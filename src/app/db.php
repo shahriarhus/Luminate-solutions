@@ -64,14 +64,16 @@ try {
         throw new Exception("Execute failed: " . $stmt->error);
     }
 
-} catch (Exception $e) {
+} 
+catch (Exception $e) {
     http_response_code(500);
     header('Content-Type: application/json');
     echo json_encode([
         'success' => false,
         'error' => $e->getMessage()
     ]);
-} finally {
+} 
+finally {
     if (isset($stmt)) {
         $stmt->close();
     }
