@@ -12,8 +12,8 @@ export class DashboardComponent {
 
   navItems = [
     // { icon: 'dashboard', label: 'Dashboard', link: '/' },
-    { icon: 'person', label: 'Contact Details', link: '/contact-details' },
-    // { icon: 'groups', label: 'Quote', link: '/' },
+    { icon: 'person', label: 'Contact Details', link: '/contactdt' },
+    { icon: 'groups', label: 'Quote', link: '/quotedt' },
     // { icon: 'account_circle', label: 'Profile', link: '/' },
   ];
 

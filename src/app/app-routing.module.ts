@@ -14,6 +14,7 @@ import { DisclaimerComponent } from './footer/disclaimer/disclaimer.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactDetailsComponent } from './dashboard/contact-details/contact-details.component';
+import { QuoteDetailsComponent } from './dashboard/quote-details/quote-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,9 +29,17 @@ const routes: Routes = [
   {path: 'Refund Policy', component: RefundPolicyComponent},
   {path: 'Cancellation Policy', component: CancellationPolicyComponent},
   {path: 'quote', component: QuoteFormComponent},
-  {path: 'dashboard', component: DashboardComponent},
-  {path:'contactdt', component: ContactDetailsComponent},
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  // {path: 'dashboard', component: DashboardComponent},
+  // {path:'contactdt', component: ContactDetailsComponent},
+  // { path: '**', redirectTo: '', pathMatch: 'full' },
+  {
+    path: '',
+    component: DashboardComponent,
+    children: [
+      { path: 'contactdt', component: ContactDetailsComponent },
+      { path: 'quotedt', component: QuoteDetailsComponent },
+    ]
+  },
 ];
 
 @NgModule({

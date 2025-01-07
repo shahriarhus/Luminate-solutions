@@ -42,6 +42,7 @@ import { ChatWidgetComponent } from './chat-widget/chat-widget.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactDetailsComponent } from './dashboard/contact-details/contact-details.component';
+import { QuoteDetailsComponent } from './dashboard/quote-details/quote-details.component';
 
 
 
@@ -63,6 +64,7 @@ import { ContactDetailsComponent } from './dashboard/contact-details/contact-det
     QuoteFormComponent,
     DashboardComponent,
     ContactDetailsComponent,
+    QuoteDetailsComponent,
     
     
   ],
