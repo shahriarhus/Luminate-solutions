@@ -29,7 +29,7 @@ const routes: Routes = [
   {path: 'Cancellation Policy', component: CancellationPolicyComponent},
   {path: 'quote', component: QuoteFormComponent},
   {path: 'dashboard', component: DashboardComponent},
-  {path:'contact_details', component: ContactDetailsComponent},
+  {path:'contactdt', component: ContactDetailsComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
