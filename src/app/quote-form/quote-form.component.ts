@@ -83,6 +83,13 @@ export class QuoteFormComponent implements OnInit  {
     const formData: QuoteFormData = this.quoteForm.value;
     this.quoteFormService.submitQuoteForm(formData).subscribe(response => {
       console.log('Form submitted successfully', response);
+      this.quoteForm.reset(); // Add this line to reset the form
+      Object.keys(this.quoteForm.controls).forEach(key => {
+        const control = this.quoteForm.get(key);
+        if (control) {
+          control.setValue(null);
+        }
+      });
     }, error => {
       console.error('Error submitting form', error);
     });
