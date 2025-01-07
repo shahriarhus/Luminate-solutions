@@ -32,17 +32,18 @@ const routes: Routes = [
   {path: 'Cancellation Policy', component: CancellationPolicyComponent},
   {path: 'quote', component: QuoteFormComponent},
   {path: 'login', component: LoginComponent},
-  // {path: 'dashboard', component: DashboardComponent},
+  {path: 'dashboard', component: DashboardComponent},
   // {path:'contactdt', component: ContactDetailsComponent},
-  // { path: '**', redirectTo: '', pathMatch: 'full' },
+  // {path:'quotedt', component: QuoteDetailsComponent},
   {
-    path: 'dashboard',
+    path: '',
     component: DashboardComponent,
     children: [
       { path: 'contactdt', component: ContactDetailsComponent },
       { path: 'quotedt', component: QuoteDetailsComponent },
     ]
   },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
