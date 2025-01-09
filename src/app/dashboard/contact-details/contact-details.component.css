@@ -11,10 +11,10 @@ table {
   width: 100%;
 }
 
-.mat-mdc-form-field {
+/* .mat-mdc-form-field {
   font-size: 14px;
   width: 100%;
-}
+} */
 
 td, th {
   padding: 8px 16px;
@@ -32,4 +32,30 @@ td, th {
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+
+
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.action-section {
+  display: flex;
+  align-items: center;
+}
+
+.action-section button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

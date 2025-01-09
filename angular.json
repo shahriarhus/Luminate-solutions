@@ -90,6 +90,21 @@
                 "glob": "get-quotes.php",
                 "input": "src/app",
                 "output": "/"
+              },
+              {
+                "glob": "update-contact.php",
+                "input": "src/app",
+                "output": "/"
+              },
+              {
+                "glob": "delete-contact.php",
+                "input": "src/app",
+                "output": "/"
+              },
+              {
+                "glob": "delete-quote.php",
+                "input": "src/app",
+                "output": "/"
               }
             ],
             "styles": [

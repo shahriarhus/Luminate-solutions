@@ -1,26 +1,39 @@
 .mat-elevation-z8 {
-    margin: 20px;
-  }
-  
-  table {
-    width: 100%;
-  }
-  
-  .mat-form-field {
-    font-size: 14px;
-    width: 100%;
-    margin: 20px 0;
-  }
-  
-  .mat-cell, .mat-header-cell {
-    padding: 0 15px;
-  }
-  
-  .mat-row:hover {
-    background-color: #f5f5f5;
-  }
-  
-  .action-button {
-    margin: 0 4px;
-  }
-  
+  margin: 20px;
+  overflow: auto;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.action-section {
+  display: flex;
+  align-items: center;
+}
+
+.action-section button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+td, th {
+  padding: 8px 16px;
+}

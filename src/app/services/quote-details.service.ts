@@ -24,15 +24,25 @@ export interface QuoteDetail {
   created_at: string;
 }
 
+export interface ApiResponse {
+  success: boolean;
+  data?: QuoteDetail[];
+  error?: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class QuoteDetailsService {
-  private apiUrl = 'http://localhost/lws2/get-quotes.php';
+  private apiUrl = 'http://localhost/lws2';
 
   constructor(private http: HttpClient) {}
 
-  getQuoteDetails(): Observable<{ success: boolean; data: QuoteDetail[] }> {
-    return this.http.get<{ success: boolean; data: QuoteDetail[] }>(this.apiUrl);
+  getQuoteDetails(): Observable<ApiResponse> {
+    return this.http.get<ApiResponse>(`${this.apiUrl}/get-quotes.php`);
+  }
+
+  deleteQuote(id: number): Observable<ApiResponse> {
+    return this.http.delete<ApiResponse>(`${this.apiUrl}/delete-quote.php?id=${id}`);
   }
 }

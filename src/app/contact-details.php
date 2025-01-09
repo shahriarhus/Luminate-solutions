@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Include configuration files
+// Include database configuration
 require_once 'database.php';
 require_once 'cors.php';
 
@@ -16,36 +16,47 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit();
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "luminatewebsol";
+// Only allow GET requests
+if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
+    http_response_code(405);
+    echo json_encode(['error' => 'Method not allowed']);
+    exit();
+}
 
 try {
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Get database connection
+    $conn = initializeDatabase();
 
-    if ($conn->connect_error) {
-        throw new Exception("Connection failed: " . $conn->connect_error);
-    }
-
-    $query = "SELECT name, email, phone, subject, message FROM contact_form";
+    // Query to get all contact form submissions
+    $sql = "SELECT id, name, email, phone, subject, message, 
+            DATE_FORMAT(created_at, '%Y-%m-%d %H:%i:%s') as created_at 
+            FROM contact_form 
+            ORDER BY created_at DESC";
     
-    $result = $conn->query($query);
+    $result = $conn->query($sql);
 
     if (!$result) {
         throw new Exception("Query failed: " . $conn->error);
     }
 
+    // Fetch all records
     $contacts = [];
     while ($row = $result->fetch_assoc()) {
         $contacts[] = $row;
     }
 
-    echo json_encode(['success' => true, 'data' => $contacts]);
+    // Return success response
+    echo json_encode([
+        'success' => true,
+        'data' => $contacts
+    ]);
 
 } catch (Exception $e) {
     http_response_code(500);
-    echo json_encode(['success' => false, 'error' => $e->getMessage()]);
+    echo json_encode([
+        'success' => false,
+        'error' => $e->getMessage()
+    ]);
 } finally {
     if (isset($result)) {
         $result->close();
@@ -54,3 +65,4 @@ try {
         $conn->close();
     }
 }
+?>

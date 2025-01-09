@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table'; 
 import { MatSortModule } from '@angular/material/sort';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -43,7 +44,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactDetailsComponent } from './dashboard/contact-details/contact-details.component';
 import { QuoteDetailsComponent } from './dashboard/quote-details/quote-details.component';
 import { LoginComponent } from './login/login.component';
-import { MatLabel } from '@angular/material/form-field';
+import { EditContactDialogComponent } from './dashboard/contact-details/edit-contact-dialog.component';
 
 
 @NgModule({
@@ -66,6 +67,7 @@ import { MatLabel } from '@angular/material/form-field';
     ContactDetailsComponent,
     QuoteDetailsComponent,
     LoginComponent,
+    EditContactDialogComponent
     
     
   ],
@@ -89,7 +91,7 @@ import { MatLabel } from '@angular/material/form-field';
     MatPaginatorModule,
     MatTableModule,
     MatSortModule,
-    MatLabel
+    MatDialogModule
 
   ],
   providers: [
