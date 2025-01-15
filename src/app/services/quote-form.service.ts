@@ -28,7 +28,7 @@ export interface QuoteFormData {
   providedIn: 'root'
 })
 export class QuoteFormService {
-  private apiUrl = 'http://localhost/lws2/quote.php';
+  private apiUrl = './quote.php';
 
   constructor(private http: HttpClient) {}
 

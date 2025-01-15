@@ -105,6 +105,11 @@
                 "glob": "delete-quote.php",
                 "input": "src/app",
                 "output": "/"
+              },
+              {
+                "glob": ".htaccess",
+                "input": "src/app",
+                "output": "/"
               }
             ],
             "styles": [

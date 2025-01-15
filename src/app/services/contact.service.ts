@@ -14,7 +14,7 @@ export interface ContactFormData {
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'http://localhost/lws2/db.php';
+  private apiUrl = './db.php';
 
   constructor(private http: HttpClient) {}
 

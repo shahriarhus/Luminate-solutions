@@ -22,7 +22,7 @@ export interface ApiResponse {
   providedIn: 'root'
 })
 export class ContactDetailsService {
-  private apiUrl = 'http://localhost/lws2';
+  private apiUrl = './';
 
   constructor(private http: HttpClient) {}
 

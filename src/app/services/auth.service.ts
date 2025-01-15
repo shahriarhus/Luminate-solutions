@@ -12,7 +12,7 @@ interface LoginResponse {
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost/lws2/login.php';
+  private apiUrl = './login.php';
   private tokenKey = 'auth_token';
 
   constructor(private http: HttpClient) {}
