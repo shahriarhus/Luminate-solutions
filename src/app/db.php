@@ -54,28 +54,12 @@ try {
 
     // Execute the statement
     if ($stmt->execute()) {
-        // Send email
-        $to = "your-email@example.com"; // Replace with your email address
-        $emailSubject = "New Contact Form Submission: " . $data['subject'];
-        $emailBody = "
-            Name: " . $data['name'] . "\n
-            Email: " . $data['email'] . "\n
-            Phone: " . $data['phone'] . "\n
-            Subject: " . $data['subject'] . "\n
-            Message:\n" . $data['message'] . "
-        ";
-        $headers = "From: " . $data['email'] . "\r\nReply-To: " . $data['email'];
-
-        if (mail($to, $emailSubject, $emailBody, $headers)) {
-            http_response_code(200);
-            header('Content-Type: application/json');
-            echo json_encode([
-                'success' => true,
-                'message' => 'Message sent successfully and stored in database'
-            ]);
-        } else {
-            throw new Exception('Failed to send email');
-        }
+        http_response_code(200);
+        header('Content-Type: application/json');
+        echo json_encode([
+            'success' => true,
+            'message' => 'Message sent successfully'
+        ]);
     } else {
         throw new Exception("Execute failed: " . $stmt->error);
     }
