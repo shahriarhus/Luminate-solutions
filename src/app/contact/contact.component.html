@@ -31,7 +31,7 @@
         </div>
       </div>
 
-      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" action="contact-process.php" method="POST" class="contact-form">
         <div class="form-group">
           <input type="text" formControlName="name" placeholder="Name" class="form-input">
           <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid" class="error-message">
