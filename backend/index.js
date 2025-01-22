@@ -4,17 +4,23 @@ import { spawn } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-app.use(cors());
+// Update CORS configuration
+app.use(cors({
+  origin: ['https://luminatewebsol.com', 'http://luminatewebsol.com'],
+  credentials: true,
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+// Add OPTIONS handling for preflight requests
+app.options('*', cors());
+
 app.use(express.json());
-
-
-
 console.log("Backend Connected");
 
 
@@ -91,7 +97,12 @@ app.post('/chat', async (req, res) => {
 //     const gettech = await collection.find({}).toArray(); 
 //     res.status(200).json(gettech);
 // });
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
+  next();
+});
 
-app.listen(PORT, () =>{
-    console.log(`Server is running on http://localhost:${PORT}`);
-})
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+

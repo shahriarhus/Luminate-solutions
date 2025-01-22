@@ -1,10 +1,10 @@
 <?php
 
 // Database configuration
-define('DB_HOST', 'localhost');//change
-define('DB_USER', 'root');//change
+define('DB_HOST', '');//change
+define('DB_USER', '');//change
 define('DB_PASS', '');//change
-define('DB_NAME', 'luminatewebsol');
+define('DB_NAME', '');
 
 // Create database connection
 function getConnection() {

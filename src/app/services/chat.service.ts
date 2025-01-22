@@ -6,11 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ChatService {
-  private apiUrl = 'http://localhost:3000'; // Base URL
+  // Remove the port number from the URL
+  private apiUrl = 'https://luminatewebsol.com';
 
   constructor(private http: HttpClient) {}
 
   sendMessage(message: string): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/chat`, { message });
+    return this.http.post<any>(`${this.apiUrl}/chat`, { message }, {
+      withCredentials: false // Add this if using credentials
+    });
   }
 }
