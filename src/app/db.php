@@ -6,6 +6,10 @@ ini_set('display_errors', 1);
 // Include configuration files
 require_once 'database.php';
 require_once 'cors.php';
+require 'vendor/autoload.php'; // Include Composer's autoloader
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 // Set CORS headers
 setCorsHeaders();
@@ -54,27 +58,42 @@ try {
 
     // Execute the statement
     if ($stmt->execute()) {
-        // Send email
-        $to = "mohdyousuf9059@gmail.com"; // Replace with your email address
-        $emailSubject = "New Contact Form Submission: " . $data['subject'];
-        $emailBody = "
-            Name: " . $data['name'] . "\n
-            Email: " . $data['email'] . "\n
-            Phone: " . $data['phone'] . "\n
-            Subject: " . $data['subject'] . "\n
-            Message:\n" . $data['message'] . "
-        ";
-        $headers = "From: " . $data['email'] . "\r\nReply-To: " . $data['email'];
+        // Send email using PHPMailer
+        $mail = new PHPMailer(true);
+        try {
+            // Server settings
+            $mail->isSMTP();
+            $mail->Host = 'smtp.example.com'; // Set the SMTP server to send through
+            $mail->SMTPAuth = true;
+            $mail->Username = 'your-email@example.com'; // SMTP username
+            $mail->Password = 'your-email-password'; // SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+            $mail->Port = 587;
 
-        if (mail($to, $emailSubject, $emailBody, $headers)) {
+            // Recipients
+            $mail->setFrom($data['email'], $data['name']);
+            $mail->addAddress('mohdyousuf9059@gmail.com'); // Add a recipient
+
+            // Content
+            $mail->isHTML(true);
+            $mail->Subject = 'New Contact Form Submission: ' . $data['subject'];
+            $mail->Body    = "
+                Name: " . $data['name'] . "<br>
+                Email: " . $data['email'] . "<br>
+                Phone: " . $data['phone'] . "<br>
+                Subject: " . $data['subject'] . "<br>
+                Message:<br>" . nl2br($data['message']) . "
+            ";
+
+            $mail->send();
             http_response_code(200);
             header('Content-Type: application/json');
             echo json_encode([
                 'success' => true,
                 'message' => 'Message sent successfully and stored in database'
             ]);
-        } else {
-            throw new Exception('Failed to send email');
+        } catch (Exception $e) {
+            throw new Exception('Failed to send email. Mailer Error: ' . $mail->ErrorInfo);
         }
     } else {
         throw new Exception("Execute failed: " . $stmt->error);
