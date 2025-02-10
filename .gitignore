@@ -37,6 +37,7 @@ yarn-error.log
 testem.log
 /typings
 .htaccess
+chat_log.csv
 
 # System files
 .DS_Store
