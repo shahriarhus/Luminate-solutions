@@ -21,15 +21,46 @@
         </button>
       </div>
   
-      <!-- Messages -->
-      <div class="chat-messages">
+       <!-- Messages -->
+       <div class="chat-messages">
+        <!-- Static Options -->
+        <div class="message message-bot">
+          <div class="message-content">
+            <p>Hello! How can we assist you today?</p>
+            <!-- <div class="static-options">
+              <a href="https://wa.me/917207367455" target="_blank" class="option-link">
+                <i class="material-icons">chat</i> Chat on WhatsApp
+              </a>
+              <a href="tel:+917207367455" class="option-link">
+                <i class="material-icons">call</i> Call Us
+              </a>
+            </div> -->
+            <div class="static-options">
+              <a href="https://wa.me/917207367455" target="_blank" class="option-link">
+                <i class="material-icons">chat</i> Chat on WhatsApp
+              </a>
+              <a href="tel:+917207367455" class="option-link">
+                <i class="material-icons">call</i> Call Us
+              </a>
+              <a href="mailto:info@luminatewebsol.com" class="option-link">
+                <i class="material-icons">email</i> Email Us
+              </a>
+              <a href="https://luminatewebsol.com/solutions" class="option-link">
+                <i class="material-icons">public</i> Visit Website
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Messages -->
         <div *ngFor="let message of messages" 
              [ngClass]="{'message-bot': message.role === 'bot', 'message-user': message.role === 'user'}"
              class="message">
-          <div class="message-content">
-            {{ message.content }}
+          <div class="message-content" [innerHTML]="message.content">
           </div>
         </div>
+
+        <!-- Typing Indicator -->
         <div *ngIf="isLoading" class="message message-bot">
           <div class="message-content">
             <div class="typing-indicator">
@@ -57,4 +88,4 @@
         </button>
       </div>
     </div>
-  </div>
+</div>

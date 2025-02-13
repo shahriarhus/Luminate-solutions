@@ -152,6 +152,34 @@
   .typing-indicator span:nth-child(3) {
     animation-delay: 0.3s;
   }
+
+  .static-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .option-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #007bff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .option-link:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .option-link i {
+    font-size: 18px;
+  }
+  
   
   @keyframes bounce {
     0%, 60%, 100% {
