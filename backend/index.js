@@ -1,28 +1,28 @@
-import express from 'express';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
 import cors from 'cors';
-import { spawn } from 'child_process';
+const express = require('express');
+const { spawn } = require('child_process');
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
-// Update CORS configuration
+// Fix: Correct the typo in __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename); // Corrected here
+
 app.use(cors({
-  origin: ['https://luminatewebsol.com', 'http://luminatewebsol.com'],
+  origin: ['https://luminatewebsol.com', 'https://luminatewebsol.com:3000', 'http://localhost:4200'],
+  methods: ['GET', 'POST'],
   credentials: true,
-  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// Add OPTIONS handling for preflight requests
-app.options('*', cors());
-
 app.use(express.json());
 console.log("Backend Connected");
-
 
 app.post('/chat', async (req, res) => {
   try {
@@ -35,16 +35,12 @@ app.post('/chat', async (req, res) => {
     console.log('Received message:', message);
     
     // Spawn Python process with explicit path
-    const pythonPath = 'python'; // or 'python3' depending on your system
-    const scriptPath = path.join(__dirname, 'app.py');
+    const pythonPath = 'python3'; // or 'python3' depending on your system
+    const scriptPath = path.join(__dirname, 'app.py'); // Use the corrected __dirname
     
     console.log('Executing Python script:', scriptPath);
     
-    const pythonProcess = spawn(pythonPath, [
-      scriptPath,
-      '--message', 
-      message
-    ]);
+    const pythonProcess = spawn('python3', [scriptPath, '--message', message]); // Use the correct scriptPath
     
     let responseData = '';
     let errorData = '';
@@ -92,11 +88,6 @@ app.post('/chat', async (req, res) => {
   }
 });
 
-// app.get('/marketing-cards', async (req, res) => {
-//     const collection = db.collection('marketing');
-//     const gettech = await collection.find({}).toArray(); 
-//     res.status(200).json(gettech);
-// });
 app.use((req, res, next) => {
   console.log(`${new Date().toISOString()} - ${req.method} ${req.url}`);
   next();
@@ -105,4 +96,3 @@ app.use((req, res, next) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on port ${PORT}`);
 });
-

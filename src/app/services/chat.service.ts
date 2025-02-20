@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ChatService {
   // Remove the port number from the URL
-  private apiUrl = 'https://luminatewebsol.com';
+  private apiUrl = 'http://localhost:4200';
 
   constructor(private http: HttpClient) {}
 
